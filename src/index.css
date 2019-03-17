@@ -1,11 +1,15 @@
 body {
-    background-color: #FFCC00;
+    background-color: #632020;
     padding: 20px;
     margin: 0;
   }
   h1, h2, p, ul, li {
     font-family: sans-serif;
   }
+  h1 {
+    color:#FFF;
+  }
+
   ul.header li {
     display: inline;
     list-style-type: none;
