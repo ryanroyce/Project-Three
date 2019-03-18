@@ -42,11 +42,11 @@ ul.header li a {
   background-color: #0099FF;
 }
 .action-buttons {
-display: inline;
-/* height:240px;
-width:240px; */
+height:200px;
+width:200px;
+margin-top:20%;
 }
 
-.movie {
-  display:inline;
+.search-movies {
+  text-align: center;
 }
