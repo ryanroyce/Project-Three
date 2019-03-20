@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import deleteImage from './images/delete.png';
-import approveImage from './images/approve.png';
-import coverArt from './images/matrix.png';
-class SearchMovies extends Component {
+import deleteImage from '../../images/delete.png';
+import approveImage from '../../images/approve.png';
+import coverArt from '../../images/matrix.png';
+class Search extends Component {
   render() {
     return (
       <div>
@@ -19,9 +19,10 @@ class SearchMovies extends Component {
             <img id="approve-button" className="action-buttons" src={approveImage} alt="delete" />
           </div>
         </div>
+        
       </div>
     );
   }
 }
 
-export default SearchMovies;
+export default Search;
