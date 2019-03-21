@@ -8,12 +8,12 @@ class Search extends Component {
     return (
       <div className="ui middle aligned center aligned grid">
         <div className="five wide column search-movies">
-          <img id="delete-button" className="action-buttons" src={deleteImage} alt="delete" />
-          {/* <i className="angle left icon" id="action-buttons"></i> */}
+          <a href="/search" className="ui medium image" id="action-buttons">
+            <img src={deleteImage} alt="delete" />
+          </a>
         </div>
 
         <div className="six wide column">
-          {/* <img src={coverArt} alt="movie-art" /> */}
           <div className="ui card" id="movie-card">
             <a className="image" href="/">
               <img src={coverArt} alt="movie-art" />
@@ -28,8 +28,9 @@ class Search extends Component {
         </div>
 
         <div className="five wide column search-movies">
-          {/* <i className="angle right icon" id="action-buttons"></i> */}
-          <img id="approve-button" className="action-buttons" src={approveImage} alt="delete" />
+          <a href="/search" className="ui medium image" id="action-buttons">
+            <img src={approveImage} alt="delete" />
+          </a>
         </div>
       </div>
     );

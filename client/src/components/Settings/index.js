@@ -11,7 +11,7 @@ function Settings() {
             </div>
             {/* Need to get 2 working dropdown menus for genre filter and rating filter*/}
             {/* They are not part of current MVP */}
-           
+
             <div className="row">
                 <button className="ui button" id="settings-btn">
                     Genre Filter
@@ -23,9 +23,7 @@ function Settings() {
                     Rating Filter
             </button>
             </div>
-            
-            
-            
+
             {/* <div className="row"> */}
             <button className="ui button" id="settings-btn">
                 Delete Account

@@ -36,6 +36,7 @@ function LoginForm() {
           </form>
 
           <div className="ui message">
+          <i className="us flag"></i>
             New to us? <a href="/">Sign Up</a>
           </div>
        

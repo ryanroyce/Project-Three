@@ -5,7 +5,8 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to FilmDex!</h1>
+        <h1>Welcome to FilmDex!
+        </h1>
         <LoginForm></LoginForm>
       </div>
     );
