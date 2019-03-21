@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import SearchMovies from "./pages/SearchMovies";
 import SavedMovies from "./pages/SavedMovies";
 import Settings from "./pages/Settings";
-import Logout from "./pages/Logout";
+// import Logout from "./pages/Logout";
 import NoMatch from "./pages/NoMatch";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/search" component={SearchMovies} />
           <Route exact path="/saved" component={SavedMovies} />
           <Route exact path="/settings" component={Settings} />
-          <Route exact path="/logout" component={Logout} />
+          <Route exact path="/" component={Login} />
           <Route component={NoMatch} />
         </Switch>
       </div>

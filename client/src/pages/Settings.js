@@ -7,7 +7,6 @@ class SettingsPage extends Component {
     return (
       <div>
         <Nav />
-        <h2>Settings</h2>
         <Settings />  
 
       </div>
