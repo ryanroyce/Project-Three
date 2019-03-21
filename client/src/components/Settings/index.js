@@ -4,19 +4,34 @@ import React from "react";
 function Settings() {
     return (
         <div className="ui grid">
-           
-            <div className="one wide column">
-            </div>
-            <button className="ui button">
-                Change Email
+            <div className="row">
+                <button className="ui button" id="settings-btn">
+                    Change Email
             </button>
-            
+            </div>
             {/* Need to get 2 working dropdown menus for genre filter and rating filter*/}
             {/* They are not part of current MVP */}
-            <button className="ui button">
-                Delete Account
+           
+            <div className="row">
+                <button className="ui button" id="settings-btn">
+                    Genre Filter
             </button>
             </div>
+
+            <div className="row">
+                <button className="ui button" id="settings-btn">
+                    Rating Filter
+            </button>
+            </div>
+            
+            
+            
+            {/* <div className="row"> */}
+            <button className="ui button" id="settings-btn">
+                Delete Account
+            </button>
+            {/* </div> */}
+        </div>
         // </div>
 
     );
