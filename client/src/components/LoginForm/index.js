@@ -1,40 +1,41 @@
 import React from "react";
+import "./style.css";
 
 function LoginForm() {
   return (
     <div>
-      <div class="ui middle aligned center aligned grid">
-        <div class="six wide column">
-          <h2 class="ui black image header">
+      <div className="ui middle aligned center aligned grid">
+        <div className="six wide column">
+          <h2 className="ui black image header">
 
-            <div class="content">
+            <div className="content">
               Log-in to your account
             </div>
           </h2>
 
-          <form class="ui large form">
-            <div class="ui stacked segment">
-              <div class="field">
-                <div class="ui left icon input">
-                  <i class="user icon"></i>
+          <form className="ui large form">
+            <div className="ui stacked segment">
+              <div className="field">
+                <div className="ui left icon input">
+                  <i className="user icon"></i>
                   <input type="text" name="email" placeholder="E-mail address" />
                 </div>
               </div>
 
-              <div class="field">
-                <div class="ui left icon input">
-                  <i class="lock icon"></i>
+              <div className="field">
+                <div className="ui left icon input">
+                  <i className="lock icon"></i>
                   <input type="password" name="password" placeholder="Password" />
                 </div>
               </div>
 
-              <div class="ui fluid large grey submit button">Login</div>
+              <div className="ui fluid large grey submit button">Login</div>
             </div>
 
-            <div class="ui error message"></div>
+            <div className="ui error message"></div>
           </form>
 
-          <div class="ui message">
+          <div className="ui message">
             New to us? <a href="/login">Sign Up</a>
           </div>
         </div>
