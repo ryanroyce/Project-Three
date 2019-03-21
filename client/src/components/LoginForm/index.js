@@ -36,11 +36,11 @@ function LoginForm() {
           </form>
 
           <div className="ui message">
-            New to us? <a href="/login">Sign Up</a>
+            New to us? <a href="/">Sign Up</a>
           </div>
+       
         </div>
       </div>
-
     </div>
   );
 }

@@ -6,32 +6,34 @@ import coverArt from '../../images/matrix.png';
 class Search extends Component {
   render() {
     return (
-      <div className="ui grid">
-        <div className="four wide column search-movies">
+      <div className="ui middle aligned center aligned grid">
+        <div className="five wide column search-movies">
           <img id="delete-button" className="action-buttons" src={deleteImage} alt="delete" />
           {/* <i className="angle left icon" id="action-buttons"></i> */}
         </div>
-        <div className="eight wide column search-movies">
-            {/* <img src={coverArt} alt="movie-art" /> */}
-            <div class="ui card">
-              <a class="image" href="/">
-                <img src={coverArt} alt="movie-art"/>
-                </a>
-                <div class="content">
-                  <a class="header" href="/">The Matrix</a>
-                  <div class="meta">
-                    <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                  </div>
-                </div>
-                  </div>
-          </div>
-          <div className=" four wide column search-movies">
-            {/* <i className="angle right icon" id="action-buttons"></i> */}
-            <img id="approve-button" className="action-buttons" src={approveImage} alt="delete" />
+
+        <div className="six wide column">
+          {/* <img src={coverArt} alt="movie-art" /> */}
+          <div className="ui card" id="movie-card">
+            <a className="image" href="/">
+              <img src={coverArt} alt="movie-art" />
+            </a>
+            <div className="content">
+              <a className="header" href="/">The Matrix</a>
+              <div className="meta">
+                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+              </div>
+            </div>
           </div>
         </div>
-        );
-      }
-    }
-    
+
+        <div className="five wide column search-movies">
+          {/* <i className="angle right icon" id="action-buttons"></i> */}
+          <img id="approve-button" className="action-buttons" src={approveImage} alt="delete" />
+        </div>
+      </div>
+    );
+  }
+}
+
 export default Search;

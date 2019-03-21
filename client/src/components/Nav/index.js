@@ -3,17 +3,17 @@ import React from "react";
 function Nav() {
   return (
     
-    <div class="ui inverted menu">
-      <a class="item" href="search">
+    <div className="ui inverted menu">
+      <a className="item" href="search">
         Search Movies
       </a>
-      <a class="item" href="saved">
+      <a className="item" href="saved">
         Saved Movies
       </a>
-      <a class="item" href="settings">
+      <a className="item" href="settings">
         Settings
       </a>
-      <a class="item" href="logout">
+      <a className="item" href="logout">
         Logout
       </a>
     </div>

@@ -1,49 +1,27 @@
 body {
     background-color: #632020;
-    /* padding: 20px; */
-  }
-h1, h2, p, ul, li {
-    font-family: sans-serif;
-  }
-h1 {
-    color:#FFF;
-  }
-ul.header li {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-  }
-ul.header {
-    background-color: #111;
-    padding: 0;
-    text-align:right;
-  }
-ul.header li a {
-    color: #FFF;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
   }
 .content {
     background-color: #FFF;
     padding: 20px;
-  }
-.content h2 {
-    padding: 0;
-    margin: 0;
-  }
-.content li {
-    margin-bottom: 10px;
-  }
-.active {
-    background-color: #0099FF;
   }
 .action-buttons {
   height:40%;
   width:40%;
   margin-top:25%;
   }
-.search-movies {
-    text-align: center;
+#movie-card {
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
   }
+#delete-button {
+    display: block;
+    margin-left: auto;
+    margin-right: 0%;
+}
+#approve-button {
+    display: block;
+    margin-left: 0%;
+    margin-right: auto;
+}
