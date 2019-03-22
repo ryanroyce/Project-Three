@@ -1,0 +1,31 @@
+body {
+    background-color: #632020;
+  }
+.content {
+    background-color: #FFF;
+    padding: 20px;
+  }
+.action-buttons {
+  height:40%;
+  width:40%;
+  margin-top:25%;
+  }
+#movie-card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+#delete-button {
+    display: block;
+    margin-left: auto;
+    margin-right: 0%;
+}
+#approve-button {
+    display: block;
+    margin-left: 0%;
+    margin-right: auto;
+}
+#settings-btn {
+    display: inline;
+    /* background-color: purple; */
+}
