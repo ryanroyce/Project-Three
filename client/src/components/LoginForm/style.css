@@ -5,27 +5,21 @@ body {
     background-color: #FFF;
     padding: 20px;
   }
-.action-buttons {
-  height:40%;
-  width:40%;
-  margin-top:25%;
-  }
+
 #movie-card {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height:25%;
+    width:25%;
   }
-#delete-button {
-    display: block;
-    margin-left: auto;
-    margin-right: 0%;
-}
-#approve-button {
-    display: block;
-    margin-left: 0%;
-    margin-right: auto;
-}
 #settings-btn {
     display: inline;
     /* background-color: purple; */
+}
+#thumbs-down {
+  color: red;
+}
+#thumbs-up {
+  color: green;
 }

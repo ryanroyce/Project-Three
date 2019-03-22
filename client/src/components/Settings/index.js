@@ -30,9 +30,6 @@ function Settings() {
             </button>
             {/* </div> */}
         </div>
-        // </div>
-
     );
 }
-
 export default Settings;
