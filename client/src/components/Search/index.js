@@ -5,8 +5,6 @@ class Search extends Component {
   render() {
     return (
       <div className="ui middle aligned center aligned grid">
-
-
         <div className="sixteen wide column">
           <div className="ui card" id="movie-card">
             <a className="image" href="/search">

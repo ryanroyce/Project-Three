@@ -5,54 +5,80 @@ import coverArt from '../../images/matrix.png';
 function Saved() {
     return (
         <div className="ui grid">
-
-            <div className="ui four column doubling stackable grid container">
-                <div className="column">
-                    <img src={coverArt} alt="saved-movie" />
-                    <p>The Matrix, 1999</p>
-                    <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+            <div class="ui four cards">
+                <div class="card">
+                    <div class="image">
+                        <img src={coverArt} alt="saved-movie" />
+                    </div>
+                    <div class="extra">
+                        Rating:
+      <div class="ui star rating" data-rating="4"></div>
+                    </div>
                 </div>
-                <div className="column">
-                    <img src={coverArt} alt="saved-movie" />
-                    <p>The Matrix, 1999</p>
-                    <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+                <div class="card">
+                    <div class="image">
+                        <img src={coverArt} alt="saved-movie" />
+                    </div>
+                    <div class="extra">
+                        Rating:
+      <div class="ui star rating" data-rating="2"></div>
+                    </div>
                 </div>
-                <div className="column">
-                    <img src={coverArt} alt="saved-movie" />
-                    <p>The Matrix, 1999</p>
-                    <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+                <div class="card">
+                    <div class="image">
+                        <img src={coverArt} alt="saved-movie" />
+                    </div>
+                    <div class="extra">
+                        Rating:
+      <div class="ui star rating" data-rating="3"></div>
+                    </div>
                 </div>
-                <div className="column">
-                    <img src={coverArt} alt="saved-movie" />
-                    <p>The Matrix, 1999</p>
-                    <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+                <div class="card">
+                    <div class="image">
+                        <img src={coverArt} alt="saved-movie" />
+                    </div>
+                    <div class="extra">
+                        Rating:
+      <div class="ui star rating" data-rating="4"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src={coverArt} alt="saved-movie" />
+                    </div>
+                    <div class="extra">
+                        Rating:
+      <div class="ui star rating" data-rating="3"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src={coverArt} alt="saved-movie" />
+                    </div>
+                    <div class="extra">
+                        Rating:
+      <div class="ui star rating" data-rating="3"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src={coverArt} alt="saved-movie" />
+                    </div>
+                    <div class="extra">
+                        Rating:
+      <div class="ui star rating" data-rating="4"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src={coverArt} alt="saved-movie" />
+                    </div>
+                    <div class="extra">
+                        Rating:
+      <div class="ui star rating" data-rating="4"></div>
+                    </div>
                 </div>
             </div>
-            {/* <div className="ui raised very padded text container segment" id="saved-box">
-            <div className="ui raised small image" >
-                    <img src={coverArt} alt="saved-movie" id="saved-img" />
-                </div>
-                <div className="saved-text">The Matrix</div>
-                <div className="saved-text">A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</div>
-                <div className="saved-text">1999</div>
-            </div> */}
-
-            {/* <div className="item">
-                <div className="ui raised small image">
-                    <img src={coverArt} alt="saved-movie" />
-                </div>
-                <div className="content">
-                    <div className="header">The Matrix</div>
-                    <div className="meta">
-                        <p className="summary">A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                        <p className="year">1999</p>
-                    </div>
-                    <div className="description">
-                        <p></p>
-                    </div>
-                </div>
-            </div> */}
-
         </div>
     );
 }
