@@ -5,7 +5,7 @@ const omdbController = require("../../controllers/omdbController");
 
 // Matches with "/api/books"
 router.route("/")
-  .get(omdbController.findAll)
+  .get(omdbController.findMoviePoster)
 
 module.exports = router;
 
