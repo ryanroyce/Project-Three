@@ -25,6 +25,7 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.86.0"
+    "semantic-ui-react": "^0.86.0",
+    "unirest": "^0.6.0"
   }
 }
