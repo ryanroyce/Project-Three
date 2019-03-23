@@ -3,8 +3,7 @@ import "./style.css";
 
 function LoginForm() {
   return (
-    <div>
-      <div className="ui middle aligned center aligned grid">
+      <div className="ui middle aligned center aligned grid" id="body">
         <div className="six wide column">
           <h2 className="ui black image header">
 
@@ -42,7 +41,6 @@ function LoginForm() {
        
         </div>
       </div>
-    </div>
   );
 }
 

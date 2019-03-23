@@ -6,7 +6,7 @@ class SavedMovies extends Component {
     return (
       <div>
         <Nav />
-        <h2>Saved Movies</h2>
+        <h1>Saved Movies</h1>
         <Saved />
       </div>
     );
