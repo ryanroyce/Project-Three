@@ -1,24 +1,33 @@
 body {
-    background-color: #632020 !important;
+  background-color: #632020 !important;
+  background-image: url("../../images/background.jpg") !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
   }
 h1 {
   text-align: center;
 }
 .content {
-  /* background-color: #632020; */
-    background-color: #FFF;
-    padding: 20px;
+  color: #FFF;
+  padding: 20px;
   }
+.film-heading {
+  color: #FFF;
+  font-size: 4em;
+  font-family: constantine;
+}
+.cogs {
+  color:#DCAE1D;
+}
 #movie-card {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height:25%;
-    width:25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:25%;
+  width:25%;
   }
 #settings-btn {
-    display: inline;
-    /* background-color: purple; */
+  display: inline;
 }
 #thumbs-down {
   color: red;
