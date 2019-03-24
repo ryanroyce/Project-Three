@@ -27,8 +27,9 @@ function LoginForm() {
                   <input type="password" name="password" placeholder="Password" />
                 </div>
               </div>
-
+              <a href="/search">
               <div className="ui fluid large grey submit button">Login</div>
+              </a>
             </div>
 
             <div className="ui error message"></div>

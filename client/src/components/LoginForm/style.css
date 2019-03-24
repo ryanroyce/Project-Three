@@ -1,5 +1,8 @@
 body {
-    background-color: #632020 !important;
+  background-color: #632020 !important;
+  background-image: url("../../images/background.jpg") !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
   }
 h1 {
   text-align: center;
@@ -8,6 +11,7 @@ h1 {
   /* background-color: #632020; */
     background-color: #FFF;
     padding: 20px;
+    /* font-family: homoarakhn; */
   }
 #movie-card {
     display: block;
