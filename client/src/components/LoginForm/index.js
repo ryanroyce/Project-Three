@@ -66,17 +66,36 @@ function LoginForm() {
   <div class="header">
     Sign Up for an account
   </div>
+  <div className="ui row"></div>
   <div class="image content">
-    <div class="ui medium image">
-      <img src="https://semantic-ui.com/images/avatar2/large/rachel.png" alt="user-pic" />
-    </div>
     <div class="description">
-      <div class="ui header">We've auto-chosen a profile image for you.</div>
-      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank" rel="noopener noreferrer">gravatar</a> image associated with your registered e-mail address.</p>
-      <p>Is it okay to use this photo?</p>
+{/* sign up form */}
+      <form className="ui large form">
+      
+            <div className="ui stacked segment">
+              <div className="field">
+                <div className="ui left icon input">
+                  <i className="user icon"></i>
+                  <input type="text" name="email" placeholder="E-mail address" />
+                </div>
+              </div>
+
+              <div className="field">
+                <div className="ui left icon input">
+                  <i className="lock icon"></i>
+                  <input type="password" name="password" placeholder="Password" />
+                </div>
+              </div>
+              <a href="/">
+              <div className="ui fluid large grey submit button">Sign Up</div>
+              </a>
+            </div>
+
+            <div className="ui error message"></div>
+          </form>
     </div>
   </div>
-  <div class="actions">
+  {/* <div class="actions">
     <div class="ui black deny button">
       Nope
     </div>
@@ -84,7 +103,7 @@ function LoginForm() {
       Yep, that's me
       <i class="checkmark icon"></i>
     </div>
-  </div>
+  </div> */}
 </div>
         </div>
       </div>
