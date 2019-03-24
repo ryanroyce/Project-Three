@@ -4,6 +4,13 @@ import coverArt from '../../images/matrix.png';
 function Saved() {
     return (
         <div className="ui grid">
+            <div className="row">
+            <div className="column">
+            <h1 className="film-heading">Saved Movies</h1>
+            </div>
+            </div>
+
+
             <div className="two wide column"></div>
             <div className="twelve wide column">
                 <div className="ui four cards">

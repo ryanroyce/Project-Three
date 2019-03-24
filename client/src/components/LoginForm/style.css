@@ -6,38 +6,32 @@ body {
   }
 h1 {
   text-align: center;
-  /* font-family: '007 GoldenEye'; */
 }
 .content {
-  /* background-color: #632020; */
-    /* background-color: #FFF; */
-    color: white;
-    padding: 20px;
+  color: #FFF;
+  padding: 20px;
   }
 .film-heading {
-  color: white;
+  color: #FFF;
   font-size: 4em;
   font-family: constantine;
-  /* font-family: homoarakhn; */
+}
+.cogs {
+  color:#DCAE1D;
 }
 #movie-card {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height:25%;
-    width:25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:25%;
+  width:25%;
   }
 #settings-btn {
-    display: inline;
-    /* background-color: purple; */
+  display: inline;
 }
 #thumbs-down {
   color: red;
 }
 #thumbs-up {
   color: green;
-}
-#cog {
-  color:#DCAE1D;
-  float: right;
 }

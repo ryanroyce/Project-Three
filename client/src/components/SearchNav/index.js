@@ -7,7 +7,7 @@ function SearchNav() {
             <div className="ui row">
                 <div className="five wide column"></div>
                 <div className="one wide column">
-                    <a href="/settings" id="cog">
+                    <a href="/settings" className="cogs">
                         <i className="huge setting icon"></i>
                     </a>
                 </div>
@@ -15,7 +15,7 @@ function SearchNav() {
                     <h1 className="film-heading">FilmDex</h1>
                 </div>
                 <div className="one wide column">
-                <a href="/saved" id="cog">
+                <a href="/saved" className="cogs">
                         <i className="huge video camera icon"></i>
                     </a>
                 </div>
