@@ -14,7 +14,7 @@ function Saved() {
                         <div className="image">
                         </div>
                         <div className="content">
-                            <a className="header" href="/search">The Matrix</a>
+                            <a className="header" href="/saved">The Matrix</a>
                             <div className="meta">
                                 <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
                             </div>
@@ -31,7 +31,7 @@ function Saved() {
                         <div className="image">
                         </div>
                         <div className="content">
-                            <a className="header" href="/search">The Matrix</a>
+                            <a className="header" href="/saved">The Matrix</a>
                             <div className="meta">
                                 <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
                             </div>
@@ -47,7 +47,7 @@ function Saved() {
                         <div className="image">
                         </div>
                         <div className="content">
-                            <a className="header" href="/search">The Matrix</a>
+                            <a className="header" href="/saved">The Matrix</a>
                             <div className="meta">
                                 <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
                             </div>
@@ -63,7 +63,7 @@ function Saved() {
                         <div className="image">
                         </div>
                         <div className="content">
-                            <a className="header" href="/search">The Matrix</a>
+                            <a className="header" href="/saved">The Matrix</a>
                             <div className="meta">
                                 <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
                             </div>
@@ -79,7 +79,7 @@ function Saved() {
                         <div className="image">
                         </div>
                         <div className="content">
-                            <a className="header" href="/search">The Matrix</a>
+                            <a className="header" href="/saved">The Matrix</a>
                             <div className="meta">
                                 <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
                             </div>
@@ -95,7 +95,7 @@ function Saved() {
                         <div className="image">
                         </div>
                         <div className="content">
-                            <a className="header" href="/search">The Matrix</a>
+                            <a className="header" href="/saved">The Matrix</a>
                             <div className="meta">
                                 <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
                             </div>
@@ -111,7 +111,7 @@ function Saved() {
                         <div className="image">
                         </div>
                         <div className="content">
-                            <a className="header" href="/search">The Matrix</a>
+                            <a className="header" href="/saved">The Matrix</a>
                             <div className="meta">
                                 <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
                             </div>
@@ -127,7 +127,7 @@ function Saved() {
                         <div className="image">
                         </div>
                         <div className="content">
-                            <a className="header" href="/search">The Matrix</a>
+                            <a className="header" href="/saved">The Matrix</a>
                             <div className="meta">
                                 <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
                             </div>

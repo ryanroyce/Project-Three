@@ -6,13 +6,20 @@ body {
   }
 h1 {
   text-align: center;
+  /* font-family: '007 GoldenEye'; */
 }
 .content {
   /* background-color: #632020; */
-    background-color: #FFF;
+    /* background-color: #FFF; */
+    color: white;
     padding: 20px;
-    /* font-family: homoarakhn; */
   }
+.film-heading {
+  color: white;
+  font-size: 4em;
+  font-family: constantine;
+  /* font-family: homoarakhn; */
+}
 #movie-card {
     display: block;
     margin-left: auto;
@@ -29,4 +36,8 @@ h1 {
 }
 #thumbs-up {
   color: green;
+}
+#cog {
+  color:#DCAE1D;
+  float: right;
 }
