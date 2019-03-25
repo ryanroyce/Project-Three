@@ -1,6 +1,35 @@
 import React from "react";
-// import "./style.css";
-
+import {Dropdown} from "semantic-ui-react";
+ const genreOption = [{
+     key: "Action", 
+     text: "Action",
+     value: "Action"
+ },
+ {
+    key: "Adventure", 
+    text: "Adventure",
+    value: "Adventure"
+},
+{
+    key: "Comedy", 
+    text: "Comedy",
+    value: "Comedy"
+}]
+const ratingOption = [{
+    key: "PG", 
+    text: "PG-Parental Guidance Suggested",
+    value: "PG"
+},
+{
+   key: "PG13", 
+   text: "PG13-Parents Strongly Cautioned",
+   value: "PG13"
+},
+{
+   key: "G", 
+   text: "G-General Audiences",
+   value: "G"
+}]
 function Settings() {
     return (
         <div className="ui grid">
@@ -13,16 +42,19 @@ function Settings() {
             {/* They are not part of current MVP */}
 
             <div className="row">
+                <Dropdown placeholder = "Genre" search selection options = {genreOption}/>
                 <button className="ui button" id="settings-btn">
                     Genre Filter
             </button>
             </div>
 
             <div className="row">
+            <Dropdown placeholder = "Rating" search selection options = {ratingOption}/>
                 <button className="ui button" id="settings-btn">
                     Rating Filter
             </button>
             </div>
+
 
             {/* <div className="row"> */}
             <button className="ui button" id="settings-btn">
