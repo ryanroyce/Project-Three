@@ -1,5 +1,7 @@
 import React from "react";
 import {Dropdown} from "semantic-ui-react";
+
+/* Added dropdown menus for genre filter and rating filter*/
  const genreOption = [{
      key: "Action", 
      text: "Action",
