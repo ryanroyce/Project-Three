@@ -8,7 +8,7 @@ class SettingsPage extends Component {
       <div>
         <Nav />
         <Settings />  
-
+        
       </div>
     );
   }

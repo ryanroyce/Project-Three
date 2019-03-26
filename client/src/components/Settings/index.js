@@ -57,16 +57,23 @@ function Settings() {
             </button>
             </div>
 
+<<<<<<< HEAD
 
             {/* <div className="row"> */}
+=======
+            <div className="row">
+>>>>>>> 484e781be6e2e9df4089f3ddda1679b7d75b4db1
             <button className="ui button" id="settings-btn">
                 Delete Account
             </button>
-            {/* </div> */}
-        </div>
-        // </div>
+            </div>
 
+            <div className="row">
+            <button className="ui button" id="settings-btn">
+                Logout
+            </button>
+            </div>
+        </div>
     );
 }
-
 export default Settings;
