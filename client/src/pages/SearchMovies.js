@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Search from "../components/Search/index";
-import Nav from "../components/Nav/index"
+import SearchNav from "../components/SearchNav/index";
 
 class SearchMovies extends Component {
   render() {
     return (
       <div>
-        <Nav></Nav>
+        <SearchNav />
        <Search></Search>
       </div>
     );

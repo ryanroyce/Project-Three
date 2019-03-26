@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./pages/Login";
+import 'semantic-ui-css/semantic.min.css';
 import SearchMovies from "./pages/SearchMovies";
 import SavedMovies from "./pages/SavedMovies";
 import Settings from "./pages/Settings";
 // import Logout from "./pages/Logout";
 import NoMatch from "./pages/NoMatch";
+
 
 function App() {
   return (
