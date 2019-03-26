@@ -2,9 +2,10 @@ import React from "react";
 import "./style.css";
 
 
-
 function LoginForm() {
   return (
+
+    
     <div>
       <div className="ui middle aligned center aligned grid">
         <div className="six wide column">
