@@ -4,8 +4,7 @@ body {
   background-size: cover !important;
   background-attachment: fixed !important;
   }
-h1 {
-  text-align: center;
+text-align: center;
 }
 .content {
   color: #FFF;
