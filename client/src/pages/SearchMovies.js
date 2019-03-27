@@ -45,7 +45,11 @@ class SearchMovies extends Component {
     return (
       <div>
         <SearchNav />
-       <Search></Search>
+       <Search
+          Title={this.state.title}
+          Image={this.state.image ? this.state.image : "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"}
+          Plot={this.state.plot}
+          Year={this.state.year}></Search>
       </div>
     );
   }
