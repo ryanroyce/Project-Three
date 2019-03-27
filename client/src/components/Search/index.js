@@ -1,19 +1,20 @@
-import React, { Component } from "react";
-import coverArt from '../../images/matrix.png';
+// import React, { Component } from "react";
+import React from "react";
+// import coverArt from '../../images/matrix.png';
 
-class Search extends Component {
-  render() {
+const Search = props => {
+  // render() {
     return (
       <div className="ui middle aligned center aligned grid">
         <div className="sixteen wide column">
           <div className="ui card" id="movie-card">
             <a className="image" href="/search">
-              <img src={coverArt} alt="movie-art" />
+              <img src={props.Image} alt="movie-art" />
             </a>
             <div className="content">
-              <a className="header" href="/search">The Matrix</a>
+              <a className="header" href="/search">{props.Title} ({props.Year})</a>
               <div className="meta">
-                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+                <p>{props.Plot}</p>
               </div>
             </div>
           </div>
@@ -35,6 +36,6 @@ class Search extends Component {
       </div>
     );
   }
-}
+// }
 
 export default Search;
