@@ -6,7 +6,7 @@ module.exports = {
 
     var unirest = require('unirest');
 
-    var movieSearch = Math.floor(Math.random() * (Math.floor(200001) - Math.ceil(1))) + Math.ceil(1);
+    var movieSearch = Math.floor(Math.random() * (Math.floor(1000) - Math.ceil(1))) + Math.ceil(1);
 
     console.log("Movie Number from Controller: " + movieSearch);
 

@@ -25,14 +25,24 @@ class SearchMovies extends Component {
         API.getOMDB(response.data.body.Hits[0].Source.Title)
           .then(response => {
             console.log("Poster:" + response.data.Poster)
-            this.setState({
-              image: response.data.Poster,
-              plot: response.data.Plot,
-              year: response.data.Year
-            })
-          })
-          .catch(err => console.log(err));
 
+           if (response.data.Poster === "N/A") {
+             this.setState({
+               image: "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+             })
+           }
+           else {
+             this.setState({
+               image: response.data.Poster
+             })
+           }
+
+           this.setState({
+             plot: response.data.Plot,
+             year: response.data.Year
+           })
+         })
+         .catch(err => console.log(err));
       })
       .catch(err => console.log(err));
   }
