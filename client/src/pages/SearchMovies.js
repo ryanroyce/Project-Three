@@ -37,6 +37,7 @@ class SearchMovies extends Component {
              })
            }
 
+           
            this.setState({
              plot: response.data.Plot,
              year: response.data.Year
