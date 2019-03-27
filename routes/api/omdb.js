@@ -8,6 +8,3 @@ router.route("/")
   .get(omdbController.findMoviePoster)
 
 module.exports = router;
-
-
-

@@ -5,18 +5,19 @@ const rapidController = require("../../controllers/rapidController");
 
 // Matches with "/api/books"
 router.route("/")
- .get(rapidController.findAll)
+  .get(rapidController.findAll)
 
- router
- .route("/:genre")
- .get(rapidController.findGenre)
+  router
+  .route("/:genre")
+  .get(rapidController.findGenre)
 
- router
- .route("/provider/:providers")
- .get(rapidController.findProvider)
+  router
+  .route("/provider/:providers")
+  .get(rapidController.findProvider)
 
- router
- .route("/:providers/:genre")
- .get(rapidController.findProviderAndGenre)
+  router
+  .route("/:providers/:genre")
+  .get(rapidController.findProviderAndGenre)
 
- module.exports = router;
+
+  module.exports = router;
