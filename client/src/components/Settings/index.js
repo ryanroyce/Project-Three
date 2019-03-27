@@ -2,36 +2,32 @@ import React from "react";
 import {Dropdown} from "semantic-ui-react";
 
 /* Added dropdown menus for genre filter and rating filter*/
- const genreOption = [{
-     key: "Action", 
-     text: "Action",
-     value: "Action"
- },
- {
-    key: "Adventure", 
-    text: "Adventure",
-    value: "Adventure"
+ const genreOption = [
+     {key: "Action", text: "Action",value: "Action"},
+ 
+    {key: "Comedy", text: "Comedy",value: "Comedy"},
+  { key: "Drama", text: "Drama",value: "Drama"},
+{
+    key: "Horror", 
+    text: "Horror",
+    value: "Horror"
 },
 {
-    key: "Comedy", 
-    text: "Comedy",
-    value: "Comedy"
+    key: "Sci-fi", 
+    text: "Sci-fi",
+    value: "Sci-fi"
 }]
-const ratingOption = [{
-    key: "PG", 
-    text: "PG-Parental Guidance Suggested",
-    value: "PG"
+const providerOption = [{
+    key: "Hulu", 
+    text: "Hulu",
+    value: "Hulu"
 },
 {
-   key: "PG13", 
-   text: "PG13-Parents Strongly Cautioned",
-   value: "PG13"
-},
-{
-   key: "G", 
-   text: "G-General Audiences",
-   value: "G"
-}]
+   key: "Netflix", 
+   text: "Netflix",
+   value: "Netflix"
+}
+]
 function Settings() {
     return (
         <div className="ui grid">
@@ -51,18 +47,13 @@ function Settings() {
             </div>
 
             <div className="row">
-            <Dropdown placeholder = "Rating" search selection options = {ratingOption}/>
+            <Dropdown placeholder = "Provider" search selection options = {providerOption}/>
                 <button className="ui button" id="settings-btn">
-                    Rating Filter
+                    Provider Filter
             </button>
             </div>
 
-<<<<<<< HEAD
-
-            {/* <div className="row"> */}
-=======
             <div className="row">
->>>>>>> 484e781be6e2e9df4089f3ddda1679b7d75b4db1
             <button className="ui button" id="settings-btn">
                 Delete Account
             </button>

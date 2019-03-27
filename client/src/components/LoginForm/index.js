@@ -1,10 +1,7 @@
 import React from "react";
 import "./style.css";
-
-
 function LoginForm() {
   return (
-    <div>
       <div className="ui middle aligned center aligned grid" id="body">
         <div className="six wide column">
           <h2 className="ui black image header">
@@ -21,7 +18,6 @@ function LoginForm() {
                   <input type="text" name="email" placeholder="E-mail address" />
                 </div>
               </div>
-
               <div className="field">
                 <div className="ui left icon input">
                   <i className="lock icon"></i>
@@ -32,10 +28,8 @@ function LoginForm() {
               <div className="ui fluid large grey submit button">Login</div>
               </a>
             </div>
-
             <div className="ui error message"></div>
           </form>
-
           <div className="ui message">
           <i className="us flag"></i>
             New to us? 
@@ -47,7 +41,6 @@ function LoginForm() {
           <div className="ui modal signup-modal">
             <i className="close icon"></i>
             <div className="header"> Sign Up for an account</div>
-
             <div className="image content">
               <div className="description">
                 {/* sign up form */}
@@ -59,7 +52,6 @@ function LoginForm() {
                         <input type="text" name="email" placeholder="E-mail address" />
                       </div>
                     </div>
-
                     <div className="field">
                       <div className="ui left icon input">
                         <i className="lock icon"></i>
@@ -71,7 +63,6 @@ function LoginForm() {
                     <div className="ui fluid large grey submit button">Sign Up</div>
                     </a>
                   </div>
-
                     <div className="ui error message"></div>
                  </form>
                </div>
@@ -81,5 +72,4 @@ function LoginForm() {
        </div>
   );
 }
-
 export default LoginForm;
