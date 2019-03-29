@@ -16,6 +16,7 @@ const Saved = props => {
                 <p>{props.Plot}</p>
             </div>
             <button style = {{float: "right"}} onClick = {props.DeleteMovie}> ✗</button> 
+            
         </div>
         <div className="extra">
             Rating: 

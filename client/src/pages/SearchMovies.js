@@ -74,6 +74,7 @@ class SearchMovies extends Component {
             plot: this.state.plot,
             year:this.state.year})
           }
+          nextMovie = {() => this.componentDidMount()}
           ></Search>
       </div>
     );
