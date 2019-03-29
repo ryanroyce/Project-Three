@@ -22,7 +22,7 @@ const Search = props => {
 
         <div className="ui row">
           <div className="two wide column search-movies">
-           
+          
           <i id = "thumbs-down" onClick={props.nextMovie} className="huge thumbs down icon"></i>
             
           </div>
