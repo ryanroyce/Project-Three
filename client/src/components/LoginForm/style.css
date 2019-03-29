@@ -8,33 +8,74 @@ h1 {text-align: center;
 } 
 .content {
   color: #FFF;
-  padding: 20px;
+  padding: 0 3% 3% 3%;
   }
 .film-heading {
   color: #FFF;
-  font-size: 3em;
+  font-size: 2.5em;
   font-family: 'Cinzel', serif;
+  margin-bottom: 0%;
+  padding-top: 10%;
+}
+.cine-heading{
+    color: #FFF;
+    font-size: 5em;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 0%;
+    padding-top: 10%;
 }
 .cogs {
   color:#DCAE1D;
+}
+.sign-up-heading {
+  color: #FFF;
+  font-size: 2.5em;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0%;
+  padding-top: 23%;
+}
+.saved-heading {
+  color: #FFF;
+  font-size: 2.5em;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0%;
 }
 #movie-card {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height:25%;
-  width:25%;
+  height:20%;
+  width:20%;
   }
 #settings-btn {
   display: inline;
 }
 #thumbs-down {
   color: red;
+  text-align: right;
 }
 #thumbs-up {
   color: green;
+  text-align: left;
 }
-
+#sign-up-column{
+  padding-top:25%
+}
 #signup{
   margin-left: 2%;
+}
+#setting{
+  text-align:right;
+}
+#video{
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  #movie-card{
+    width: 80%;
+    height: 80%;
+  }
+  .cine-heading{
+    font-size: 2em;
+  }
 }

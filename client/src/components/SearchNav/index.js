@@ -3,22 +3,22 @@ import React from "react";
 
 function SearchNav() {
     return (
-        <div className="ui grid">
+        <div className="ui middle aligned center aligned grid">
             <div className="ui row">
-                <div className="five wide column"></div>
-                <div className="one wide column">
+                <div className="three wide column">
                     <a href="/settings" className="cogs">
-                        <i className="huge setting icon"></i>
+                        <i className={`huge setting icon ${'setting'}`}></i>
                     </a>
                 </div>
-                <div className="four wide column">
-                    <h1 className="film-heading">FilmDex</h1>
+                <div className="nine wide column">
+                    <h1 className="cine-heading">CinéSearch</h1>
                 </div>
-                <div className="one wide column">
+                <div className="three wide column">
                 <a href="/saved" className="cogs">
-                        <i className="huge video camera icon"></i>
+                        <i className={`huge video camera icon ${'video'}`}></i>
                     </a>
                 </div>
+                {/* <div className="two wide column"></div> */}
             </div>
         </div>
     );

@@ -37,7 +37,7 @@ class SavedMovies extends Component {
         <div className="ui grid">
           <div className="row">
             <div className="column">
-              <h1 className="film-heading">Saved Movies</h1>
+              <h1 className="saved-heading">Saved Movies</h1>
             </div>
           </div>
 

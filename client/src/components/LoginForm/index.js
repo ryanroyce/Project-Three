@@ -137,14 +137,14 @@ class LoginForm extends Component {
     return (
       <div className="ui middle aligned center aligned grid" id="body">
        
-      <div className="ten wide column">
-      <h1 className="film-heading">Welcome to CinéSearch!
+      <div className="eight wide column">
+      <h1 className="film-heading">CinéSearch
         </h1>
-      <h2 className="ui black image header">
+      <span className="ui black image header">
              <div className="content">
                Log-in to your account
              </div>
-           </h2>
+           </span>
         <form className="ui large form">
           <div className="ui stacked segment">
             <div className="field">
