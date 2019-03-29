@@ -13,6 +13,13 @@ class SearchMovies extends Component {
     year:""
   }
 
+  saveMovie = movieData => {
+    API.saveMovie(movieData).then(this.getRapid())
+  
+      
+      .catch(err => console.log(err));
+  };
+
 
   getRapid() {
 
@@ -26,7 +33,7 @@ class SearchMovies extends Component {
           .then(response => {
             console.log("Poster:" + response.data.Poster)
 
-           if (response.data.Poster === "N/A") {
+           if (!typeof response.data.Poster || response.data.Poster  === "N/A") {
              this.setState({
                image: "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
              })
@@ -51,7 +58,7 @@ class SearchMovies extends Component {
   componentDidMount() {
     this.getRapid();
   }
-
+ 
   render() {
     return (
       <div>
@@ -60,7 +67,14 @@ class SearchMovies extends Component {
           Title={this.state.title}
           Image={this.state.image ? this.state.image : "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"}
           Plot={this.state.plot}
-          Year={this.state.year}></Search>
+          Year={this.state.year}
+          saveMovie={() => this.saveMovie({ 
+            title: this.state.title,
+            image: this.state.image,
+            plot: this.state.plot,
+            year:this.state.year})
+          }
+          ></Search>
       </div>
     );
   }
