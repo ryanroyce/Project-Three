@@ -1,5 +1,4 @@
-// import React from "react";
-// import "./style.css";
+
 
 // function LoginForm() {
 //   return (
@@ -136,14 +135,21 @@ class LoginForm extends Component {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
     return (
-      <div>
-        <h4>Login</h4>
-        <form className="form-horizontal">
-          <div className="form-group">
-            <div className="col-1 col-ml-auto">
-              <label className="form-label" htmlFor="username">Username</label>
-            </div>
-            <div className="col-3 col-mr-auto">
+      <div className="ui middle aligned center aligned grid" id="body">
+       
+      <div className="ten wide column">
+      <h1 className="film-heading">Welcome to CinéSearch!
+        </h1>
+      <h2 className="ui black image header">
+             <div className="content">
+               Log-in to your account
+             </div>
+           </h2>
+        <form className="ui large form">
+          <div className="ui stacked segment">
+            <div className="field">
+            <div className="ui left icon input">
+            <i className="user icon"></i>
               <input className="form-input"
                 type="text"
                 id="username"
@@ -152,13 +158,12 @@ class LoginForm extends Component {
                 value={this.state.username}
                 onChange={this.handleChange}
               />
+              </div>
             </div>
-          </div>
-          <div className="form-group">
-            <div className="col-1 col-ml-auto">
-              <label className="form-label" htmlFor="password">Password: </label>
-            </div>
-            <div className="col-3 col-mr-auto">
+          
+          <div className="field">
+                <div className="ui left icon input">
+                <i className="lock icon"></i>
               <input className="form-input"
                 placeholder="password"
                 type="password"
@@ -168,14 +173,23 @@ class LoginForm extends Component {
               />
             </div>
           </div>
-          <div className="form-group ">
-            <div className="col-7"></div>
-            <button
-              className="btn btn-primary col-1 col-mr-auto"
+      
+          <button className="ui fluid large grey submit button"
               onClick={this.handleSubmit}
               type="submit">Login</button>
           </div>
+
+          <div className="ui error message"></div>
+
+
+           <div className="ui message">
+             New to us?  
+            <a href="/sign-up">
+             <button className="ui button yellow create_btn" type="button" id="signup">Sign Up</button>
+            </a>
+          </div>
         </form>
+        </div>
       </div>
     )
   }
