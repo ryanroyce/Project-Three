@@ -1,153 +1,35 @@
 import React from "react";
-import coverArt from '../../images/matrix.png';
+// import DeleteBtn from "../DeleteBtn"
+// import coverArt from '../../images/matrix.png';
 
-function Saved() {
+const Saved = props => {
     return (
-        <div className="ui grid">
-            <div className="row">
-            <div className="column">
-            <h1 className="film-heading">Saved Movies</h1>
-            </div>
-            </div>
-
-
-            <div className="two wide column"></div>
-            <div className="twelve wide column">
-                <div className="ui four cards">
-                    <div className="card">
-                        <div className="image">
-                            <img src={coverArt} alt="movie-art" />
-                        </div>
-                        <div className="image">
-                        </div>
-                        <div className="content">
-                            <a className="header" href="/saved">The Matrix</a>
-                            <div className="meta">
-                                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                            </div>
-                        </div>
-                        <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating="0"></div>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="image">
-                            <img src={coverArt} alt="movie-art" />
-                        </div>
-                        <div className="image">
-                        </div>
-                        <div className="content">
-                            <a className="header" href="/saved">The Matrix</a>
-                            <div className="meta">
-                                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                            </div>
-                        </div>
-                        <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating="0"></div>
-                        </div>
-                    </div><div className="card">
-                        <div className="image">
-                            <img src={coverArt} alt="movie-art" />
-                        </div>
-                        <div className="image">
-                        </div>
-                        <div className="content">
-                            <a className="header" href="/saved">The Matrix</a>
-                            <div className="meta">
-                                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                            </div>
-                        </div>
-                        <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating="0"></div>
-                        </div>
-                    </div><div className="card">
-                        <div className="image">
-                            <img src={coverArt} alt="movie-art" />
-                        </div>
-                        <div className="image">
-                        </div>
-                        <div className="content">
-                            <a className="header" href="/saved">The Matrix</a>
-                            <div className="meta">
-                                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                            </div>
-                        </div>
-                        <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating="0"></div>
-                        </div>
-                    </div><div className="card">
-                        <div className="image">
-                            <img src={coverArt} alt="movie-art" />
-                        </div>
-                        <div className="image">
-                        </div>
-                        <div className="content">
-                            <a className="header" href="/saved">The Matrix</a>
-                            <div className="meta">
-                                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                            </div>
-                        </div>
-                        <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating="0"></div>
-                        </div>
-                    </div><div className="card">
-                        <div className="image">
-                            <img src={coverArt} alt="movie-art" />
-                        </div>
-                        <div className="image">
-                        </div>
-                        <div className="content">
-                            <a className="header" href="/saved">The Matrix</a>
-                            <div className="meta">
-                                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                            </div>
-                        </div>
-                        <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating="0"></div>
-                        </div>
-                    </div><div className="card">
-                        <div className="image">
-                            <img src={coverArt} alt="movie-art" />
-                        </div>
-                        <div className="image">
-                        </div>
-                        <div className="content">
-                            <a className="header" href="/saved">The Matrix</a>
-                            <div className="meta">
-                                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                            </div>
-                        </div>
-                        <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating="0"></div>
-                        </div>
-                    </div><div className="card">
-                        <div className="image">
-                            <img src={coverArt} alt="movie-art" />
-                        </div>
-                        <div className="image">
-                        </div>
-                        <div className="content">
-                            <a className="header" href="/saved">The Matrix</a>
-                            <div className="meta">
-                                <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
-                            </div>
-                        </div>
-                        <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating="0"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="card">
+        <div className="image">
+            <img src={props.Image} alt="movie-art" />
         </div>
+        <div className="image">
+        </div>
+        <div className="content">
+            <a className="header" href="/saved">{props.Title} ({props.Year})</a>
+            <div className="meta">
+                <p>{props.Plot}</p>
+            </div>
+            <button style = {{float: "right"}} onClick = {props.DeleteMovie}> ✗</button> 
+        </div>
+        <div className="extra">
+            Rating: 
+            <div className="ui star rating" data-rating="0"></div>
+     
+         
+        </div>
+        </div> 
     );
 }
 
 export default Saved;
+
+
+
+
+

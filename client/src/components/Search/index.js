@@ -22,15 +22,15 @@ const Search = props => {
 
         <div className="ui row">
           <div className="two wide column search-movies">
-            <a href="/search" id="thumbs-down">
-              <i className="huge thumbs down icon"></i>
-            </a>
+           
+              <i onClick={props.saveMovie} className="huge thumbs down icon"></i>
+            
           </div>
 
           <div className="two wide column search-movies">
-            <a href="/search" id="thumbs-up">
-              <i className="huge thumbs up icon"></i>
-            </a>
+   
+              <i id="thumbs-up" className="huge thumbs up icon"  onClick={props.saveMovie} ></i>
+            
           </div>
         </div>
       </div>

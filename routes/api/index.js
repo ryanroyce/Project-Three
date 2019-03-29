@@ -1,11 +1,11 @@
 const router = require("express").Router();
-const bookRoutes = require("./books");
+const movieRoutes = require("./movies");
 const googleRoutes = require("./google");
 const rapidRoutes = require("./rapid");
 const omdbRoutes = require("./omdb");
 
 
-router.use("/books", bookRoutes);
+router.use("/movies", movieRoutes);
 router.use("/googlebooks", googleRoutes);
 router.use("/rapid", rapidRoutes);
 router.use("/omdb", omdbRoutes);
