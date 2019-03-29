@@ -10,9 +10,6 @@ function Nav() {
       <a className="item" href="saved">
         Saved Movies
       </a>
-      <a className="item" href="settings">
-        Settings
-      </a>
       <a className="item" href="/">
         Logout
       </a>
