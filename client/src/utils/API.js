@@ -29,5 +29,15 @@ export default {
 
   getOMDB: function (query) {
     return axios.get("/api/omdb", { params: { t: query } });
+  },
+  getUser: function(userData) {
+    console.log(userData)
+    return axios.post("/api/users", userData);
+  },
+  saveUser: function(userData) {
+    return axios.post("/api/users/sign-up", userData);
+  },
+  checkUser: function(userData) {
+    return axios.get("/api/users/check", userData);
   }
 };
