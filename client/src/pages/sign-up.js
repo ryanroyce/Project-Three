@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import API from '../utils/API'
+import React, { Component } from 'react';
+import API from '../utils/API';
 
 class Signup extends Component {
 	constructor() {
@@ -8,8 +7,7 @@ class Signup extends Component {
 		this.state = {
 			username: '',
 			password: '',
-			confirmPassword: '',
-
+			confirmPassword: ''
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
@@ -50,8 +48,6 @@ class Signup extends Component {
 			  .catch(err => console.log(err));
 		  }
 	}
-
-	
 
 render() {
 	return (

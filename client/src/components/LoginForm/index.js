@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import "./style.css";
-import API from "../../utils/API"
+import API from "../../utils/API";
 
 class LoginForm extends Component {
   constructor() {
