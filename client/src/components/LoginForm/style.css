@@ -46,7 +46,7 @@ h1 {text-align: center;
   margin-right: auto;
   height:20%;
   width:20%;
-  }
+}
 #settings-btn {
   display: inline;
 }
@@ -74,7 +74,7 @@ h1 {text-align: center;
   #movie-card{
     width: 80%;
     height: 80%;
-  }
+}
   .cine-heading{
     font-size: 2em;
   }
