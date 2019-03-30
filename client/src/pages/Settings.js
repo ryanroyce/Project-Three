@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Nav from "../components/Nav/index"
 import Settings from "../components/Settings/index"
-import PopupExampleClick from "../components/Modal/index"
+// import PopupExampleClick from "../components/Modal/index"
 
 class SettingsPage extends Component {
   render() {
@@ -9,7 +9,7 @@ class SettingsPage extends Component {
       <div>
         <Nav />
         <Settings />  
-        <PopupExampleClick />
+        {/* <PopupExampleClick /> */}
       </div>
     );
   }

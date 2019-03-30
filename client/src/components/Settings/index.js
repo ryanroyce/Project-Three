@@ -42,10 +42,12 @@ function Settings() {
             </button>
             </div> */}
             <div className="col-md-6">
-            <p style = {{color : "white"}}>
+            <p style = {{color : "white"}} className= "genre-heading">
             &nbsp; &nbsp; &nbsp; Select a genre
            </p>
-            <Dropdown placeholder='Genre' multiple selection options={genreOption} />
+            {/* <Dropdown placeholder='Genre' multiple selection options={genreOption} /> */}
+            {/* <Dropdown placeholder='Genre' clearable options={genreOption} selection /> */}
+            <Dropdown placeholder='Genre' search selection options={genreOption} />
             </div>
             </div>
             <div className="row">
@@ -61,10 +63,12 @@ function Settings() {
                
            </div> */}
            <div className="col-md-6">
-           <p style = {{color : "white"}}>
+           <p style = {{color : "white"}} className= "genre-heading"> 
            &nbsp; &nbsp; &nbsp; Provider Filter
            </p>
-             <Dropdown placeholder='Provider' multiple selection options={providerOption} />
+             {/* <Dropdown placeholder='Provider' multiple selection options={providerOption} /> */}
+             {/* <Dropdown placeholder='Provider' clearable options={providerOption} selection /> */}
+             <Dropdown placeholder='Provider' search selection options={providerOption} />
             </div>
            </div>
             
@@ -72,7 +76,7 @@ function Settings() {
             <div className="row">
             <div className="col-md-6">
             <Modal
-    trigger={<Button style = {{width : "195px"}}>Delete Account</Button>}
+    trigger={<Button className="ui yellow button" style = {{width : "195px"}}>Delete Account</Button>}
     header='Are you sure you want to delete your account!'
     // content='Call Benjamin regarding the reports.'
     actions={[ { key: 'no', content: 'No', positive: false },{ key: 'yes', content: 'Yes', positive: true }]}
