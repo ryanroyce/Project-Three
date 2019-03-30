@@ -1,6 +1,6 @@
 import React from "react";
 // import { render } from "react-dom";
-import { Button, Modal } from "semantic-ui-react";
+import { Button, Modal, Input } from "semantic-ui-react";
 import "semantic-ui-css/semantic.css";
 
 class PopupExampleClick extends React.Component {
@@ -10,19 +10,19 @@ class PopupExampleClick extends React.Component {
     return (
       
       <div>
-        <Button content="Change Email" onClick={() => this.setState({ open: true })} />
+        <Button style = {{width : "182px"}} content="Change Email" onClick={() => this.setState({ open: true, open2:false })} />
         <Modal
           open={this.state.open}
           onClose={() => this.setState({ open: false })}
         >
-          <Modal.Content>
+          <Modal.Content> <Input placeholder='Enter Your New Email' />
             <Button
-              content="Enter Your New Email"
+              content="Save"
               onClick={() => this.setState({ open2: true })}
             />
             <Modal open={this.state.open2}>
-              <Modal.Content>
-                <Button onClick={() => this.setState({ open2: false })}>
+              <Modal.Content> 
+                <Button onClick={() => this.setState({ open: false })}>
                   Successfully Updated Your Email
 
                 </Button>

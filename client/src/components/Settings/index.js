@@ -1,7 +1,7 @@
 import React from "react";
 import {Dropdown} from "semantic-ui-react";
 // import { render } from "react-dom";
-import { Button, Modal, Header } from "semantic-ui-react";
+import { Button, Modal} from "semantic-ui-react";
 import "semantic-ui-css/semantic.css";
 // import PopupExampleClick from "../Modal"
 
@@ -10,8 +10,8 @@ import "semantic-ui-css/semantic.css";
      {key: "Action", text: "Action",value: "Action"},
      {key: "Comedy", text: "Comedy",value: "Comedy"},
      { key: "Drama", text: "Drama",value: "Drama"},
-     {key: "Horror", text: "Horror",value: "Horror"},
-     {key: "Sci-fi", text: "Sci-fi",value: "Sci-fi"}
+     {key: "Documentary", text: "Documentary",value: "Documentary"},
+     {key: "Horror", text: "Horror",value: "Horror"}
 ]
 
 /* Added dropdown menus for provider filter*/
@@ -36,46 +36,53 @@ function Settings() {
            
             
             <div className="row">
-            <div className="col-md-6">
+            {/* <div className="col-md-6">
                 <button className="ui button" id="settings-btn">
-                    Genre Filter &nbsp; &nbsp; &nbsp;
+                Select a genre &nbsp; &nbsp; &nbsp;
             </button>
-            </div>
+            </div> */}
             <div className="col-md-6">
+            <p style = {{color : "white"}}>
+            &nbsp; &nbsp; &nbsp; Select a genre
+           </p>
             <Dropdown placeholder='Genre' multiple selection options={genreOption} />
             </div>
             </div>
             <div className="row">
-            <div className="col-md-6">
+            {/* <div className="col-md-6">
                 <button className="ui button" id="settings-btn">
                     Provider Filter
             </button>
             </div>
             <div className="col-md-6">
               <Dropdown placeholder='Provider' multiple selection options={providerOption} />
-             </div>
+             </div> */}
+             {/* <div className="col-md-6">
+               
+           </div> */}
+           <div className="col-md-6">
+           <p style = {{color : "white"}}>
+           &nbsp; &nbsp; &nbsp; Provider Filter
+           </p>
+             <Dropdown placeholder='Provider' multiple selection options={providerOption} />
             </div>
+           </div>
+            
 
             <div className="row">
-            {/* <button className="ui button" id="settings-btn">
-                Delete Account
-            </button> */}
-            <Modal trigger={<Button>Delete Account</Button>}>
-    <Modal.Header>Delete Account?</Modal.Header>
-    <Modal.Content image>
-      {/* <Image wrapped size='medium' src='/images/avatar/large/rachel.png' /> */}
-      <Modal.Description>
-        <Header>Are you sure you want to delete your account?</Header>
-        <p>We've found the following gravatar image associated with your e-mail address.</p>
-        <p>Is it okay to use this photo?</p>
-      </Modal.Description>
-    </Modal.Content>
-        <Modal.Actions>
-      <Button primary>
-        Yes
-      </Button>
-    </Modal.Actions>
-  </Modal>
+            <div className="col-md-6">
+            <Modal
+    trigger={<Button style = {{width : "195px"}}>Delete Account</Button>}
+    header='Are you sure you want to delete your account!'
+    // content='Call Benjamin regarding the reports.'
+    actions={[ { key: 'no', content: 'No', positive: false },{ key: 'yes', content: 'Yes', positive: true }]}
+  />
+            </div></div>
+            <div className="row">
+            <div className="col-md-6">
+             
+  </div>
+ 
             </div>
         </div>
     );
