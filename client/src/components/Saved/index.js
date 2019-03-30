@@ -1,6 +1,7 @@
 import React from "react";
 // import DeleteBtn from "../DeleteBtn"
 // import coverArt from '../../images/matrix.png';
+// import "../LoginForm/style.css";
 
 const Saved = props => {
     return (
@@ -13,16 +14,14 @@ const Saved = props => {
         <div className="content">
             <a className="header" href="/saved">{props.Title} ({props.Year})</a>
             <div className="meta">
+            <button className="" id="delete-button" onClick = {props.DeleteMovie}> ✗</button> 
+            
                 <p>{props.Plot}</p>
             </div>
-            <button style = {{float: "right"}} onClick = {props.DeleteMovie}> ✗</button> 
-            
         </div>
         <div className="extra">
             Rating: 
-            <div className="ui star rating" data-rating="0"></div>
-     
-         
+            <div className="ui star rating" data-rating="0"></div>         
         </div>
         </div> 
     );

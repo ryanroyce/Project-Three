@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Nav from "../components/Nav/index"
 import Saved from "../components/Saved";
 import API from "../utils/API";
-// import DeleteBtn from "../components/DeleteBtn";
 class SavedMovies extends Component {
 
   state = {
@@ -11,12 +10,12 @@ class SavedMovies extends Component {
     plot: "",
     image: "",
     year: ""
-    // synopsis: ""
   };
 
   componentDidMount() {
     this.loadMovies();
   }
+
   loadMovies = () => {
     API.getMovies()
       .then(res =>
@@ -24,16 +23,17 @@ class SavedMovies extends Component {
       )
       .catch(err => console.log(err));
   };
+
   deleteMovie = id => {
     API.deleteMovie(id)
       .then(res => this.loadMovies())
       .catch(err => console.log(err));
   };
+
   render() {
     return (
       <div>
         <Nav />
-        return (
         <div className="ui grid">
           <div className="row">
             <div className="column">
@@ -41,33 +41,24 @@ class SavedMovies extends Component {
             </div>
           </div>
 
-
           <div className="two wide column"></div>
           <div className="twelve wide column">
             <div className="ui four cards">
               {this.state.movies.map(movie => (
                 <Saved
-
+                  // Key={movie.id}
                   Title={movie.title}
                   Plot={movie.plot}
                   Image={movie.image}
                   Year={movie.year}
-                  DeleteMovie={() => this.deleteMovie(movie._id)}
-
-                >
-                
+                  DeleteMovie={() => this.deleteMovie(movie._id)}>
                 </Saved>
-
               ))}
-
             </div>
           </div>
         </div>
-
-
       </div>
     );
-
   }
 }
 

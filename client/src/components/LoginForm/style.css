@@ -70,6 +70,15 @@ h1 {text-align: center;
 #video{
   text-align: left;
 }
+#delete-button {
+  color: #841f25;
+  /* background-color: #841f25; */
+  float: right;
+  /* border: 1px solid red; */
+  height: 15%;
+  width: 15%;
+  border-radius: 20%;
+}
 @media only screen and (max-width: 600px) {
   #movie-card{
     width: 80%;
