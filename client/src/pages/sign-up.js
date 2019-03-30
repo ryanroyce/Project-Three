@@ -49,75 +49,59 @@ class Signup extends Component {
 			  .then(res => this.loadUser())
 			  .catch(err => console.log(err));
 		  }
-
-		//request to server to add a new username/password
-		// axios.post('/users/sign-up', {
-		// 	username: this.state.username,
-		// 	password: this.state.password
-		// })
-		// 	.then(response => {
-		// 		console.log(response)
-		// 		if (!response.data.errmsg) {
-		// 			console.log('successful signup')
-		// 			this.setState({ //redirect to login page
-		// 				redirectTo: '/login'
-		// 			})
-		// 		} else {
-		// 			console.log('username already taken')
-		// 		}
-		// 	}).catch(error => {
-		// 		console.log('signup error: ')
-		// 		console.log(error)
-		// 	})
 	}
 
 	
 
 render() {
 	return (
+		<div className="ui middle aligned center aligned grid" id="body">
+		<div className="eight wide column" id="sign-up-column">
+		<h4 className="ui black image header">
+			 <div className="sign-up-heading">
+               Sign up
+             </div>
+           </h4>
 		<div className="SignupForm">
-			<h4>Sign up</h4>
-			<form className="form-horizontal">
-				<div className="form-group">
-					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="username">Username</label>
-					</div>
-					<div className="col-3 col-mr-auto">
-						<input className="form-input"
-							type="text"
-							id="username"
-							name="username"
-							placeholder="Username"
-							value={this.state.username}
-							onChange={this.handleChange}
-						/>
-					</div>
-				</div>
-				<div className="form-group">
-					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="password">Password: </label>
-					</div>
-					<div className="col-3 col-mr-auto">
-						<input className="form-input"
-							placeholder="password"
-							type="password"
-							name="password"
-							value={this.state.password}
-							onChange={this.handleChange}
-						/>
-					</div>
-				</div>
-				<div className="form-group ">
-					<div className="col-7"></div>
-					<button
-						className="btn btn-primary col-1 col-mr-auto"
-						onClick={this.handleSubmit}
-						type="submit"
-					>Sign up</button>
-				</div>
-			</form>
-		</div>
+		   <form className="ui large form">
+          <div className="ui stacked segment">
+            <div className="field">
+            <div className="ui left icon input">
+            <i className="user icon"></i>
+              <input className="form-input"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+              </div>
+            </div>
+          
+          <div className="field">
+                <div className="ui left icon input">
+                <i className="lock icon"></i>
+              <input className="form-input"
+                placeholder="password"
+                type="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
+      
+          <button className="ui fluid large yellow submit button"
+              onClick={this.handleSubmit}
+              type="submit">Sign Up!</button>
+          </div>
 
+          <div className="ui error message"></div>
+        </form>
+        </div>
+      </div>
+	  </div>
 	)
 }
 }
