@@ -109,6 +109,7 @@ class LoginForm extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log('handleSubmit BOI')
+    sessionStorage.setItem("username", this.state.username)
 
     if (this.state.username && this.state.password) {
       API.getUser({

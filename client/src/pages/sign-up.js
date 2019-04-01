@@ -20,23 +20,12 @@ class Signup extends Component {
 		})
 	}
 
-	checkUser(){
-		API.checkUser({
-			username: this.state.username
-		})
-		.then(res => {
-			if(res.data)
-			window.location.href="/";
-			else
-			console.log("ALREADY A USERNAME");
-		})
-		.catch(err => console.log(err))
-	}
 
 	loadUser(){
 		window.location.href="/";
 	}
 
+	
 	handleSubmit(event) {
 		event.preventDefault()
 		console.log('sign-up handleSubmit, username: ')
@@ -46,7 +35,15 @@ class Signup extends Component {
 			  username: this.state.username,
 			  password: this.state.password,
 			})
-			  .then(res => this.loadUser())
+				// .then(res => this.loadUser())
+				.then(res => {
+					console.log(res)
+					if (res.data.error){
+						alert(res.data.error)
+					} else {
+						this.loadUser()
+					}
+				})
 			  .catch(err => console.log(err));
 		  }
 	}
