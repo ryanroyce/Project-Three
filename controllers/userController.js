@@ -1,5 +1,5 @@
 const dB = require('../models')
-// const passport = require('../passport')
+const passport = require('../passport')
 const bcrypt = require('bcryptjs');
 
 
@@ -7,10 +7,11 @@ module.exports = {
 
 create: function(req, res) {
    const { username, password } = req.body
-   dB.User.findOne({ username: username }, (err, user) => { 
+   return dB.User.findOne({ username: username }, (err, user) => { 
     if (err) {
             console.log('User.js post error: ', err)
         } else if (user) {
+            console.log("User Exists")
             res.json({
                 error: `Sorry, already a user with the username: ${username}`
             })
@@ -21,39 +22,43 @@ create: function(req, res) {
                 password: password
             })
             console.log("after new User: ",username, password, user);  
-            newUser.save((err, savedUser) => { 
+            return newUser.save((err, savedUser) => { 
                 if (err) return res.json(err)
-                res.json(savedUser)
+                return res.json(savedUser)
             })
         }
     })
 },
-validate: function (req, res) {
-    dB.User.findOne({
-        username: req.body.username
-    }).then(function (user) {
-      if (!user) {
-        res.json( false);
-      } else {
-        bcrypt.compare(req.body.password, user.password, function (err, result) {
-          if (result === true) {
-            res.json(result);
-          } else {
-            res.json(false);
-          }
-        });
-      }
-    });
-  },
-checkUsername: function(req, res) {
-  dB.User.findOne({
-    username: req.body.username
-  }).then(function (user) {
-    console.log(user)
-    if(username)
-         res.json(true);
-    else 
-        res.json(false);
-  })
+
+// validate: function (req, res) {
+    // dB.User.findOne({
+    //     username: req.body.username
+    // }).then(function (user) {
+    //   if (!user) {
+    //     res.json(false);
+    //   } else {
+    //     bcrypt.compare(req.body.password, user.password, function (err, result) {
+    //       if (result === true) {
+    //         req.session.username = req.body.username;
+    //         res.json(result);
+    //       } else {
+    //         res.json(false);
+    //       }
+    //     });
+    //   }
+    // });
+
+  // },
+
+getUser: function(req, res) {
+  router.get('/', (req, res) => {
+    console.log('===== user!!======')
+    console.log(req.user)
+    if (req.user) {
+        res.json({ user: req.user })
+    } else {
+        res.json({ user: null })
+    }
+})
 }
 };

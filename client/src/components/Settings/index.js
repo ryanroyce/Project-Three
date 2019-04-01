@@ -5,6 +5,8 @@ import { Button, Modal, Header } from "semantic-ui-react";
 import "semantic-ui-css/semantic.css";
 // import PopupExampleClick from "../Modal"
 
+
+
 /* Added dropdown menus for genre filter*/
  const genreOption = [
      {key: "Action", text: "Action",value: "Action"},
@@ -21,6 +23,9 @@ const providerOption = [
     {key: "Hulu", text: "Hulu",value: "Hulu"},
     {key: "Netflix", text: "Netflix",value: "Netflix"}
 ]
+
+var username = sessionStorage.getItem(username);
+  console.log(username);
 
 function Settings() {
     return (
