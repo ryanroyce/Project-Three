@@ -14,14 +14,15 @@ const Saved = props => {
         <div className="content">
             <a className="header" href="/saved">{props.Title} ({props.Year})</a>
             <div className="meta">
-            <button className="" id="delete-button" onClick = {props.DeleteMovie}> ✗</button> 
             
                 <p>{props.Plot}</p>
             </div>
         </div>
         <div className="extra">
-            Rating: 
-            <div className="ui star rating" data-rating="0"></div>         
+            Rating:
+            <div className="ui star rating" data-rating="0"></div>  
+            {/* <button className="ui button" id="delete-button" onClick = {props.DeleteMovie}> ✗</button>  */}
+            <i className="trash alternate outline icon" id="delete-button" onClick = {props.DeleteMovie}></i>
         </div>
         </div> 
     );
