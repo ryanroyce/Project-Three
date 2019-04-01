@@ -22,7 +22,7 @@ h1 {text-align: center;
     font-size: 5em;
     font-family: 'Cinzel', serif;
     margin-bottom: 0%;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 .cogs {
   color:#DCAE1D;
@@ -79,12 +79,12 @@ h1 {text-align: center;
   width: 1%;
   /* border-radius: 20%; */
 }
-@media only screen and (max-width: 600px) {
+@media (max-width: 768px) {
   #movie-card{
     width: 80%;
     height: 80%;
 }
   .cine-heading{
-    font-size: 2em;
+    font-size: 2.5em;
   }
 }
