@@ -49,7 +49,6 @@ class LoginForm extends Component {
     } else {
       return (
         <div className="ui middle aligned center aligned grid" id="body">
-
           <div className="eight wide column">
             <h1 className="film-heading">CinéSearch
         </h1>

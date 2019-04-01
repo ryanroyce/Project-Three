@@ -11,9 +11,7 @@ import Signup from "./pages/SignUp"
 import Success from "./pages/Success";
 import LoginForm from "../src/components/login-form";
 
-
 class App extends Component {
-
 
   render() {
     return (
