@@ -79,12 +79,52 @@ h1 {text-align: center;
   width: 1%;
   /* border-radius: 20%; */
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   #movie-card{
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
 }
-  .cine-heading{
-    font-size: 2.5em;
+}
+@media only screen and (max-width: 768px) {
+  #movie-card{
+    width: 50%;
+    height: 50%;
+}
+.cine-heading{
+  font-size: 2.5em;
+}
+/* p{
+  display: none;
+} */
+
+}
+@media only screen and (max-width: 640px) {
+  #movie-card{
+    width: 70%;
+    height: 70%;
+}
+  p{
+    display: none;
   }
+  #saved-cards{
+    font-size: .75em;
+    
+    padding: 5% 3%;
+  }
+  .extra{
+    padding: 0 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  #saved-cards{
+    padding-bottom: 0;
+  }
+  
+  #saved-extras{
+    /* padding: 0px auto 0px 0px ; */
+   padding-top: 0;
+   padding-bottom: 0;
+   padding-left: 0;
+   font-size: .75em;
+ }
 }

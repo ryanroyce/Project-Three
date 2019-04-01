@@ -34,16 +34,16 @@ class SavedMovies extends Component {
     return (
       <div>
         <Nav />
-        <div className="ui grid">
+        <div className="ui middle aligned center aligned grid">
           <div className="row">
             <div className="column">
               <h1 className="saved-heading">Saved Movies</h1>
             </div>
           </div>
 
-          <div className="two wide column"></div>
-          <div className="twelve wide column">
-            <div className="ui four cards">
+          {/* <div className="two wide column"id="empty-column"></div> */}
+          <div className="fourteen wide column">
+            <div className="ui three cards">
               {this.state.movies.map(movie => (
                 <Saved
                   // Key={movie.id}
