@@ -95,7 +95,7 @@ class LoginForm extends Component {
 
               <div className="ui message">
                 New to us?
-            <a href="/sign-up">
+            <a href="/signup">
                   <button className="ui button yellow create_btn" type="button" id="signup">Sign Up</button>
                 </a>
               </div>
