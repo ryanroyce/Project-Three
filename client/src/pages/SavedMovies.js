@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Nav from "../components/Nav/index"
+import NavBar from "../components/Nav/index"
 import Saved from "../components/Saved";
 import API from "../utils/API";
 // import DeleteBtn from "../components/DeleteBtn";
+
 class SavedMovies extends Component {
 
   state = {
@@ -32,7 +33,9 @@ class SavedMovies extends Component {
   render() {
     return (
       <div>
-        <Nav />
+       <NavBar>
+    
+  </NavBar>
         return (
         <div className="ui grid">
           <div className="row">
