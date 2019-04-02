@@ -108,7 +108,7 @@ h1 {text-align: center;
     width: 70%;
     height: 70%;
 }
-  p{
+  #saved-cards{
     display: none;
   }
   #saved-cards{
