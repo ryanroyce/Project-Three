@@ -1,93 +1,8 @@
-
-
-// function LoginForm() {
-//   return (
-//       <div className="ui middle aligned center aligned grid" id="body">
-//         <div className="six wide column">
-//           <h2 className="ui black image header">
-//             <div className="content">
-//               Log-in to your account
-//             </div>
-//           </h2>
-//           {/* login form */}
-//           <form className="ui large form">
-//             <div className="ui stacked segment">
-//               <div className="field">
-//                 <div className="ui left icon input">
-//                   <i className="user icon"></i>
-//                   <input type="text" name="email" placeholder="E-mail address" />
-//                 </div>
-//               </div>
-
-//               <div className="field">
-//                 <div className="ui left icon input">
-//                   <i className="lock icon"></i>
-//                   <input type="password" name="password" placeholder="Password" />
-//                 </div>
-//               </div>
-//               <a href="/search">
-//               <div className="ui fluid large grey submit button">Login</div>
-//               </a>
-//             </div>
-
-//             <div className="ui error message"></div>
-//           </form>
-
-//           <div className="ui message">
-//           <i className="us flag"></i>
-//             New to us? 
-            
-//             <button className="ui button yellow create_btn" type="button" id="signup">Sign Up</button>
-//           </div>
-       
-//           {/* signup modal */}
-//           <div className="ui modal signup-modal">
-//             <i className="close icon"></i>
-//             <div className="header"> Sign Up for an account</div>
-
-//             <div className="image content">
-//               <div className="description">
-//                 {/* sign up form */}
-//                 <form className="ui large form">
-//                   <div className="ui stacked segment">
-//                     <div className="field">
-//                       <div className="ui left icon input">
-//                         <i className="user icon"></i>
-//                         <input type="text" name="email" placeholder="E-mail address" />
-//                       </div>
-//                     </div>
-
-//                     <div className="field">
-//                       <div className="ui left icon input">
-//                         <i className="lock icon"></i>
-//                         <input type="password" name="password" placeholder="Password" />
-//                       </div>
-//                     </div>
-              
-//                     <a href="/">
-//                     <div className="ui fluid large grey submit button">Sign Up</div>
-//                     </a>
-//                   </div>
-
-//                     <div className="ui error message"></div>
-//                  </form>
-//                </div>
-//              </div>
-//            </div>
-//          </div>
-//        </div>
-//   );
-// }
-
-// export default LoginForm;
-
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import "./style.css";
-import axios from 'axios'
-import API from "../../utils/API"
+import API from "../../utils/API";
 
-// eslint-disable-next-line no-undef
 class LoginForm extends Component {
   constructor() {
     super()
@@ -105,7 +20,6 @@ class LoginForm extends Component {
     })
   }
 
-
   handleSubmit(event) {
     event.preventDefault()
     console.log('handleSubmit BOI')
@@ -113,19 +27,18 @@ class LoginForm extends Component {
 
     if (this.state.username && this.state.password) {
       API.getUser({
-          username: this.state.username,
-          password: this.state.password
+        username: this.state.username,
+        password: this.state.password
       })
         .then(res => {
-              console.log("output:"+res.data);
-               if(res.data){
-                 this.setState({ redirectTo:"/settings"})
-                console.log("inside output: " + res.data);
+          console.log("output:" + res.data);
+          if (res.data) {
+            this.setState({ redirectTo: "/settings" })
+            console.log("inside output: " + res.data);
 
-                // window.location.href="/settings";
-              } else
-              console.log("login machine broke")
-              this.setState({ redirectTo: null});
+          } else
+            console.log("login machine broke")
+          this.setState({ redirectTo: null });
         })
         .catch(err => console.log(err));
     }
@@ -135,65 +48,64 @@ class LoginForm extends Component {
     if (this.state.redirectTo) {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
-    return (
-      <div className="ui middle aligned center aligned grid" id="body">
-       
-      <div className="eight wide column">
-      <h1 className="film-heading">CinéSearch
+      return (
+        <div className="ui middle aligned center aligned grid" id="body">
+          <div className="eight wide column">
+            <h1 className="film-heading">CinéSearch
         </h1>
-      <span className="ui black image header">
-             <div className="content">
-               Log-in to your account
+            <span className="ui black image header">
+              <div className="content">
+                Log-in to your account
              </div>
-           </span>
-        <form className="ui large form">
-          <div className="ui stacked segment">
-            <div className="field">
-            <div className="ui left icon input">
-            <i className="user icon"></i>
-              <input className="form-input"
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Username"
-                value={this.state.username}
-                onChange={this.handleChange}
-              />
+            </span>
+            <form className="ui large form">
+              <div className="ui stacked segment">
+                <div className="field">
+                  <div className="ui left icon input">
+                    <i className="user icon"></i>
+                    <input className="form-input"
+                      type="text"
+                      id="username"
+                      name="username"
+                      placeholder="Username"
+                      value={this.state.username}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                </div>
+
+                <div className="field">
+                  <div className="ui left icon input">
+                    <i className="lock icon"></i>
+                    <input className="form-input"
+                      placeholder="password"
+                      type="password"
+                      name="password"
+                      value={this.state.password}
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                </div>
+
+                <button className="ui fluid large grey submit button"
+                  onClick={this.handleSubmit}
+                  type="submit">Login</button>
               </div>
-            </div>
-          
-          <div className="field">
-                <div className="ui left icon input">
-                <i className="lock icon"></i>
-              <input className="form-input"
-                placeholder="password"
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
-            </div>
-          </div>
-      
-          <button className="ui fluid large grey submit button"
-              onClick={this.handleSubmit}
-              type="submit">Login</button>
-          </div>
 
-          <div className="ui error message"></div>
+              <div className="ui error message"></div>
 
-
-           <div className="ui message">
-             New to us?  
-            <a href="/sign-up">
-             <button className="ui button yellow create_btn" type="button" id="signup">Sign Up</button>
-            </a>
+              <div className="ui message">
+                New to us?
+            <a href="/signup">
+                  <button className="ui button yellow create_btn" type="button" id="signup">Sign Up</button>
+                </a>
+              </div>
+            </form>
           </div>
-        </form>
         </div>
-      </div>
-    )
+      )
+    }
   }
-}}
+}
 
 export default LoginForm;

@@ -24,7 +24,9 @@
 //     handleSubmit(event) {
 //         event.preventDefault()
 //         console.log('handleSubmit')
-//         axios.post('/user/login', {
+
+//         axios
+//             .post('/user/login', {
 //                 username: this.state.username,
 //                 password: this.state.password
 //             })
@@ -45,6 +47,7 @@
 //             }).catch(error => {
 //                 console.log('login error: ')
 //                 console.log(error);
+                
 //             })
 //     }
 

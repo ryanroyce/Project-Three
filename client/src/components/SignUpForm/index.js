@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import API from '../utils/API'
+import React, { Component } from 'react';
+import API from '../../utils/API';
 
-class Signup extends Component {
+class SignUpForm extends Component {
 	constructor() {
 		super()
 		this.state = {
 			username: '',
 			password: '',
-			confirmPassword: '',
-
+			confirmPassword: ''
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
@@ -48,18 +46,17 @@ class Signup extends Component {
 		  }
 	}
 
-	
-
 render() {
 	return (
 		<div className="ui middle aligned center aligned grid" id="body">
-		<div className="eight wide column" id="sign-up-column">
-		<h4 className="ui black image header">
-			 <div className="sign-up-heading">
-               Sign up
+		<div className="eight wide column">
+		<h1 className="film-heading">CinéSearch
+        </h1>
+				<span className="ui black image header">
+              <div className="content">
+                Sign up for an account!
              </div>
-           </h4>
-		<div className="SignupForm">
+            </span>
 		   <form className="ui large form">
           <div className="ui stacked segment">
             <div className="field">
@@ -98,11 +95,10 @@ render() {
         </form>
         </div>
       </div>
-	  </div>
 	)
 }
 }
 
-export default Signup
+export default SignUpForm
 
 

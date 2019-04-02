@@ -80,8 +80,6 @@ handleSubmit(event) {
   render() {
     return (
       <div>
-        {/* <h1 className="film-heading">Welcome to CinéSearch!
-        </h1> */}
         <LoginForm updateUser={this.updateUser}></LoginForm>
       </div>
     );
