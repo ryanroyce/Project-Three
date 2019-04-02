@@ -24,9 +24,9 @@ const providerOption = [
     {key: "Netflix", text: "Netflix",value: "Netflix"}
 ]
 
-var username = sessionStorage.getItem(username);
+// var username = sessionStorage.getItem(username);
+  // eslint-disable-next-line no-undef
   console.log(username);
-
 function Settings() {
     return (
         <div className="ui grid">
