@@ -3,7 +3,7 @@ import React from "react";
 function Nav() {
   return (
     
-    <div className="ui inverted menu">
+    <div className="ui inverted menu" id="nav-bar">
       <a className="item" href="search">
         Search Movies
       </a>

@@ -2,6 +2,7 @@ import React from "react";
 // import DeleteBtn from "../DeleteBtn"
 // import coverArt from '../../images/matrix.png';
 // import "../LoginForm/style.css";
+import { Rating } from 'semantic-ui-react'
 
 const Saved = props => {
     return (
@@ -18,10 +19,11 @@ const Saved = props => {
                 <p>{props.Plot}</p>
             </div>
         </div>
+
         <div className="extra" id="saved-extras">
             Rating:
-            <div className="ui star rating" data-rating="0"></div>  
-            {/* <button className="ui button" id="delete-button" onClick = {props.DeleteMovie}> ✗</button>  */}
+            <Rating className="rating" icon='star' defaultRating={0} maxRating={4} />
+            {/* <div className="ui star rating" data-rating="0"></div>   */}
             <i className="trash alternate outline icon" id="delete-button" onClick = {props.DeleteMovie}></i>
         </div>
         </div> 
