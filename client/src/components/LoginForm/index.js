@@ -31,16 +31,20 @@ class LoginForm extends Component {
         password: this.state.password
       })
         .then(res => {
-          console.log("output:" + res.data);
+          console.log("output:" + res);
           if (res.data) {
             this.setState({ redirectTo: "/settings" })
-            console.log("inside output: " + res.data);
-
-          } else
+            console.log("inside output: " + res);
+          } else { 
+            alert("THIS NOT GOOD")
             console.log("login machine broke")
           this.setState({ redirectTo: null });
+        }
         })
         .catch(err => console.log(err));
+        
+    } else if (!this.state.username || !this.state.password) {
+      alert("Please Enter a Username or Password.")
     }
   }
 

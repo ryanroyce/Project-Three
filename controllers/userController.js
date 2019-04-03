@@ -57,8 +57,13 @@ getUser: function(req, res) {
     if (req.user) {
         res.json({ user: req.user })
     } else {
+        alert("THIS NOT WORKIN FOR ME DOG")
         res.json({ user: null })
     }
 })
-}
+},
+
+// deleteUser: function(req, res) {
+
+// }
 };

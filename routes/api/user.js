@@ -8,7 +8,7 @@ router.route("/sign-up")
   .post(userController.create);
   
 router.route("/")
-  .get(userController.getUser)
+  // .get(userController.getUser)
   .post(
     function (req, res, next) {
         console.log('routes/user.js, login, req.body: ');
@@ -25,7 +25,19 @@ router.route("/")
     }
 )
 
-// router.route('/logout', (req, res) => {
+router.route("/logout")
+.post(
+  function (req, res) {
+    if (req.user) {
+      console.log("logging out user")
+      req.logout()
+      res.send({ msg: 'logging out' })
+    } else {
+      res.send({ msg: 'no user to log out' })
+    }
+  })
+
+// router.post('/logout', (req, res) => {
 //   if (req.user) {
 //       req.logout()
 //       res.send({ msg: 'logging out' })

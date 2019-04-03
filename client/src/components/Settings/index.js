@@ -24,8 +24,6 @@ const providerOption = [
     {key: "Netflix", text: "Netflix",value: "Netflix"}
 ]
 
-var username = sessionStorage.getItem(username);
-  console.log(username);
 
 function Settings() {
     return (
