@@ -19,6 +19,9 @@ module.exports = {
     db.Movie
       .create(req.body)
       .then(dbModel => res.json(dbModel))
+      .then(function(dbMovie){
+        db.User.findOneAndUpdate({}, { $push: { movies: dbMovie._id } }, { new: true })
+      })
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
