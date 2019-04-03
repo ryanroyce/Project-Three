@@ -41,7 +41,7 @@ export default {
 
   createUser: function(userData) {
     console.log(userData)
-    return axios.post("/api/users", userData)
+    return axios.post("/api/users", userData);
   },
 
   saveUser: function(userData) {
@@ -50,5 +50,9 @@ export default {
 
   checkUser: function(userData) {
     return axios.get(`/api/users/checkuser/${userData.username}`);
-  }
+  },
+
+  // deleteUser: function(userData) {
+  //   return axios.delete("/api/users", userData.id);
+  // }
 };
