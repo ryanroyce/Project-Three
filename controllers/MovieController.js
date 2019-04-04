@@ -1,8 +1,25 @@
 const db = require("../models");
+const express = require("express");
+const app = express();
 
+const passport = require("../passport");
 // Defining methods for the booksController
 module.exports = {
+  findSaved: function(req, res){
+    console.log("!!!!!!!!!!!!!!!!!!!" + req.session.user)
+db.User
+.findOne({username: req.session.user})
+    .then(function(user){
+      
+        // console.log("SSSSSSSSSSSSSSSS"+user.movies);
+        res.json(user.movies);
+      
+    })
+  },
+
+ 
   findAll: function(req, res) {
+    console.log(req);
     db.Movie
       .find(req.query)
       .sort({ date: -1 })
@@ -15,13 +32,18 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  create: function(req, res) {
+  create:  function(req, res) {
+
+  
+    console.log("user in moviecontroller line 36:"+req.session.user  );
+   
     db.Movie
       .create(req.body)
-      .then(dbModel => res.json(dbModel))
       .then(function(dbMovie){
-        db.User.findOneAndUpdate({}, { $push: { movies: dbMovie._id } }, { new: true })
+       return db.User.findOneAndUpdate({username : req.session.user}, { $push: { movies: dbMovie } }, { new: true })
       })
+      .then(dbModel => res.json(dbModel))
+    
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
@@ -35,6 +57,7 @@ module.exports = {
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
+
       .catch(err => res.status(422).json(err));
   }
 };

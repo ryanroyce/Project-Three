@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcryptjs');
+// const db = require("../models");
 mongoose.promise = Promise;
 
 // Define userSchema
@@ -10,8 +11,10 @@ const userSchema = new Schema({
 	password: { type: String, unique: false, required: false },
 	movies: [
 		{
-			type: Schema.Types.ObjectId,
-			ref: "Movie"
+			title: { type: String },
+			image: { type: String },
+			plot:  { type: String },
+			year:  { type: String},
 		}
 	]
 

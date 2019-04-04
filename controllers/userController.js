@@ -1,8 +1,8 @@
 const dB = require('../models')
 // const passport = require('../passport')
 const bcrypt = require('bcryptjs');
-
-
+const Movie = require("../models/movie");
+const User = require("../models/user");
 module.exports = {
 
 create: function(req, res) {
@@ -55,5 +55,15 @@ checkUsername: function(req, res) {
     else 
         res.json(false);
   })
-}
+},
+
+// newUserMovie: async (req, res, next) => {
+// const {userName} =  req.session.user;
+// const newMovie = new Movie(req.body);
+// const user = await User.findOne({username: userName })
+// user.movies.push(newMovie);
+// await user.save();
+// }
+
+
 };
