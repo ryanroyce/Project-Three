@@ -11,7 +11,7 @@ module.exports = {
     console.log("Movie Number from Controller: " + movieSearch);
 
     unirest.get("https://ivaee-internet-video-archive-entertainment-v1.p.rapidapi.com/entertainment/search/")
-      .header("X-RapidAPI-Key", "f1492b112dmshbdafbfc0abaf237p169afdjsna4423e15beef")
+      .header("X-RapidAPI-Key", "m2YThGxycymshovVOgQWScSJmkEyp1W19HVjsn0dr6yrQ8nvFE")
       .header("Content-Type", "application/json")
       .query("Ids=Movie%2F" + movieSearch)
       .query("ReleaseCountries=US")
@@ -31,7 +31,7 @@ module.exports = {
               var randomMovie = results.body.Hits[0].Source.Title;
 
               unirest.get("https://ivaee-internet-video-archive-entertainment-v1.p.rapidapi.com/entertainment/search/")
-                .header("X-RapidAPI-Key", "f1492b112dmshbdafbfc0abaf237p169afdjsna4423e15beef")
+                .header("X-RapidAPI-Key", "m2YThGxycymshovVOgQWScSJmkEyp1W19HVjsn0dr6yrQ8nvFE")
                 .header("Content-Type", "application/json")
                 .query("Title=" + randomMovie.split(' ').join('+'))
                 .then(results => res.json(results));
@@ -53,7 +53,7 @@ module.exports = {
     //math.floor will be set to 78996 during final product, just need to limit api calls for testing//
     console.log("Genres=" + req.params.genre);
     unirest.get("https://ivaee-internet-video-archive-entertainment-v1.p.rapidapi.com/entertainment/search/")
-      .header("X-RapidAPI-Key", "f1492b112dmshbdafbfc0abaf237p169afdjsna4423e15beef")
+      .header("X-RapidAPI-Key", "m2YThGxycymshovVOgQWScSJmkEyp1W19HVjsn0dr6yrQ8nvFE")
       .header("Content-Type", "application/json")
       .query("Genres=" + req.params.genre)
       .query("ReleaseCountries=US")
@@ -75,7 +75,7 @@ module.exports = {
               var randomMovie = results.body.Hits[0].Source.Title;
 
               unirest.get("https://ivaee-internet-video-archive-entertainment-v1.p.rapidapi.com/entertainment/search/")
-                .header("X-RapidAPI-Key", "f1492b112dmshbdafbfc0abaf237p169afdjsna4423e15beef")
+                .header("X-RapidAPI-Key", "m2YThGxycymshovVOgQWScSJmkEyp1W19HVjsn0dr6yrQ8nvFE")
                 .header("Content-Type", "application/json")
                 .query("Title=" + randomMovie.split(' ').join('+'))
                 .then(results => res.json(results));
@@ -98,7 +98,7 @@ module.exports = {
     var randomNum = Math.floor(Math.random() * (Math.floor(1000) - Math.ceil(1))) + Math.ceil(1);
     console.log("Providers=" + req.params.providers);
     unirest.get("https://ivaee-internet-video-archive-entertainment-v1.p.rapidapi.com/entertainment/search/")
-      .header("X-RapidAPI-Key", "f1492b112dmshbdafbfc0abaf237p169afdjsna4423e15beef")
+      .header("X-RapidAPI-Key", "m2YThGxycymshovVOgQWScSJmkEyp1W19HVjsn0dr6yrQ8nvFE")
       .header("Content-Type", "application/json")
       .query("Providers=" + req.params.providers)
       // .query("ReleaseCountries=US")
@@ -120,7 +120,7 @@ module.exports = {
               var randomMovie = results.body.Hits[0].Source.Title;
 
               unirest.get("https://ivaee-internet-video-archive-entertainment-v1.p.rapidapi.com/entertainment/search/")
-                .header("X-RapidAPI-Key", "f1492b112dmshbdafbfc0abaf237p169afdjsna4423e15beef")
+                .header("X-RapidAPI-Key", "m2YThGxycymshovVOgQWScSJmkEyp1W19HVjsn0dr6yrQ8nvFE")
                 .header("Content-Type", "application/json")
                 .query("Title=" + randomMovie.split(' ').join('+'))
                 .then(results => res.json(results));
@@ -143,7 +143,7 @@ module.exports = {
     var randomNum = Math.floor(Math.random() * (Math.floor(1000) - Math.ceil(1))) + Math.ceil(1);
 
     unirest.get("https://ivaee-internet-video-archive-entertainment-v1.p.rapidapi.com/entertainment/search/")
-      .header("X-RapidAPI-Key", "f1492b112dmshbdafbfc0abaf237p169afdjsna4423e15beef")
+      .header("X-RapidAPI-Key", "m2YThGxycymshovVOgQWScSJmkEyp1W19HVjsn0dr6yrQ8nvFE")
       .header("Content-Type", "application/json")
       .query("Providers=" + req.params.providers)
       .query("Genres=" + req.params.genre)
@@ -166,7 +166,7 @@ module.exports = {
               var randomMovie = results.body.Hits[0].Source.Title;
 
               unirest.get("https://ivaee-internet-video-archive-entertainment-v1.p.rapidapi.com/entertainment/search/")
-                .header("X-RapidAPI-Key", "f1492b112dmshbdafbfc0abaf237p169afdjsna4423e15beef")
+                .header("X-RapidAPI-Key", "m2YThGxycymshovVOgQWScSJmkEyp1W19HVjsn0dr6yrQ8nvFE")
                 .header("Content-Type", "application/json")
                 .query("Title=" + randomMovie.split(' ').join('+'))
                 .then(results => res.json(results));
