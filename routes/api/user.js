@@ -6,7 +6,10 @@ const passport = require("../../passport");
 // Matches with "/api/users"
 router.route("/sign-up")
   .post(userController.create);
-  
+
+// router.route("/save-movie")
+//   .post(userController.newUserMovie);
+
 router.route("/")
   // .get(userController.getUser)
   .post(
@@ -21,6 +24,9 @@ router.route("/")
         var userInfo = {
             username: req.user.username
         };
+
+     
+        req.session.user =  req.user.username
         res.send(userInfo);
     }
 )

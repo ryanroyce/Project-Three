@@ -18,10 +18,19 @@ class SavedMovies extends Component {
 
   loadMovies = () => {
     API.getMovies()
-      .then(res =>
-        this.setState({ movies: res.data, title: "", plot: "", image: "", year: "" })
-      )
-      .catch(err => console.log(err));
+    // .then(res =>
+    //   console.log("!!!!!!!!!!!!! " + res.data))
+    .then(res => {
+      console.log("!!!!!!!res.data ", res.data);
+
+      if (Array.isArray(res.data)) {
+        this.setState({ movies: res.data })
+      } else {
+        this.setState({ movies: [] })
+      }
+
+    })
+    .catch(err => console.log(err));
   };
 
   deleteMovie = id => {
