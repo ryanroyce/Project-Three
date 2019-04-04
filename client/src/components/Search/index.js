@@ -1,7 +1,6 @@
 // import React, { Component } from "react";
 import React from "react";
 // import coverArt from '../../images/matrix.png';
-
 const Search = props => {
   // render() {
     return (
@@ -19,14 +18,12 @@ const Search = props => {
             </div>
           </div>
         </div>
-
         <div className="ui row">
           <div className="seven wide column search-movies">
           
           <i id = "thumbs-down" onClick={props.nextMovie} className="huge thumbs down icon"></i>
             
           </div>
-
           <div className="seven wide column search-movies">
    
               <i id="thumbs-up" className="huge thumbs up icon"  onClick={props.saveMovie} ></i>
@@ -37,5 +34,5 @@ const Search = props => {
     );
   }
 // }
-
 export default Search;
+// Comment
