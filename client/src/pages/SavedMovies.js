@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Nav from "../components/Nav/index"
 import Saved from "../components/Saved";
 import API from "../utils/API";
-class SavedMovies extends Component {
 
+class SavedMovies extends Component {
   state = {
     movies: [],
     title: "",
@@ -18,19 +18,14 @@ class SavedMovies extends Component {
 
   loadMovies = () => {
     API.getMovies()
-    // .then(res =>
-    //   console.log("!!!!!!!!!!!!! " + res.data))
-    .then(res => {
-      console.log("!!!!!!!res.data ", res.data);
-
-      if (Array.isArray(res.data)) {
-        this.setState({ movies: res.data })
-      } else {
-        this.setState({ movies: [] })
-      }
-
-    })
-    .catch(err => console.log(err));
+      .then(res => {
+        if (Array.isArray(res.data)) {
+          this.setState({ movies: res.data })
+        } else {
+          this.setState({ movies: [] })
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   deleteMovie = id => {
@@ -43,6 +38,7 @@ class SavedMovies extends Component {
     return (
       <div>
         <Nav />
+
         <div className="ui middle aligned center aligned grid">
           <div className="row">
             <div className="column">
@@ -50,12 +46,10 @@ class SavedMovies extends Component {
             </div>
           </div>
 
-          {/* <div className="two wide column"id="empty-column"></div> */}
           <div className="fourteen wide column">
             <div className="ui three cards">
               {this.state.movies.map(movie => (
                 <Saved
-                  // Key={movie.id}
                   Title={movie.title}
                   Plot={movie.plot}
                   Image={movie.image}

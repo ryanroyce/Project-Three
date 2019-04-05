@@ -31,9 +31,8 @@ class LoginForm extends Component {
       })
         .then(res => {
           if (res.data) {
-            this.setState({ redirectTo: "/settings" })
+            this.setState({ redirectTo: "/search" })
           } else {
-            alert("THIS NOT GOOD")
             this.setState({ redirectTo: null });
           }
         })
@@ -69,8 +68,7 @@ class LoginForm extends Component {
                       name="username"
                       placeholder="Username"
                       value={this.state.username}
-                      onChange={this.handleChange}
-                    />
+                      onChange={this.handleChange}/>
                   </div>
                 </div>
 
@@ -82,16 +80,15 @@ class LoginForm extends Component {
                       type="password"
                       name="password"
                       value={this.state.password}
-                      onChange={this.handleChange}
-                   />
-                 </div>
-               </div>
+                      onChange={this.handleChange}/>
+                  </div>
+                </div>
 
-                <button className="ui fluid large grey submit button" onClick={this.handleSubmit}type="submit">
-                 Login</button>
-             </div>
+                <button className="ui fluid large grey submit button" onClick={this.handleSubmit} type="submit">
+                  Login</button>
+              </div>
 
-               <div className="ui error message"></div>
+              <div className="ui error message"></div>
 
               <div className="ui message">
                 New to us?
@@ -99,9 +96,9 @@ class LoginForm extends Component {
                   <button className="ui button yellow create_btn" type="button" id="signup">Sign Up</button>
                 </a>
               </div>
-             </form>
-           </div>
-         </div>
+            </form>
+          </div>
+        </div>
       )
     }
   }
