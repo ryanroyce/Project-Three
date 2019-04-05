@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
-import { Button, Modal, Header } from 'semantic-ui-react'
+import { Button, Modal } from 'semantic-ui-react'
 
 class SignUpForm extends Component {
 	state = { open: false }
@@ -92,28 +92,21 @@ class SignUpForm extends Component {
 								</div>
 							</div>
 
-							<Modal trigger={<Button className="ui fluid large yellow submit button" type="submit"
+							<Modal className="eight wide column" trigger={<Button className="ui fluid large yellow submit button" type="submit"
 								onClick={(e) => {
 									this.open(e);
 									this.handleSubmit(e);
 								}}>Sign Up!</Button>}>
-								{/* <Confirm open={this.state.open} onCancel={this.loadUser} onConfirm={this.loadUser} ></Confirm> */}
-								<Modal.Header>Sign Up Confirmed!</Modal.Header>
+								<Modal.Header className="modal-content">Sign Up Confirmed!</Modal.Header>
 								<Modal.Content>
-									<Modal.Description>
-										<Header>Please login with your newly created Username & Password</Header>
-										{/* <p>Please login with your newly created Username & Password</p> */}
+									<Modal.Description className="modal-content">
+										<p>Please login with your newly created Username & Password</p>
 									</Modal.Description>
 								</Modal.Content>
 								<Modal.Actions>
 								<Button onClick={this.loadUser}> Close </Button>
 								 </Modal.Actions>
 							</Modal>
-
-
-							{/* <button className="ui fluid large yellow submit button"
-              onClick={this.handleSubmit}
-              type="submit">Sign Up!</button> */}
 						</div>
 
 						<div className="ui error message"></div>
