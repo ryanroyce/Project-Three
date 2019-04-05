@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
+import { Button, Confirm } from 'semantic-ui-react'
 
 class SignUpForm extends Component {
+	state = { open: false }
+
+  open = () => this.setState({ open: true })
+  close = () => this.setState({ open: false })
+
 	constructor() {
 		super()
 		this.state = {
@@ -39,7 +45,7 @@ class SignUpForm extends Component {
 					if (res.data.error){
 						alert(res.data.error)
 					} else {
-						this.loadUser()
+						// this.loadUser();
 					}
 				})
 			  .catch(err => console.log(err));
@@ -85,10 +91,29 @@ render() {
               />
             </div>
           </div>
-      
-          <button className="ui fluid large yellow submit button"
+
+					
+					<Button className="ui fluid large yellow submit button" 
+									 onClick={(e) => {
+										// e.preventDefault();
+										// this.handleForm(formData);
+										this.open(e);
+										// e.preventDefault();
+										this.handleSubmit(e);
+										// this.loadUser(e);
+								}}
+
+									// onClick={this.open} 
+									// onClick={this.handleSubmit}
+									type="submit">Sign Up!</Button>
+        <Confirm open={this.state.open} onCancel={this.loadUser} onConfirm={this.loadUser} ></Confirm>
+					
+					
+					
+					
+					{/* <button className="ui fluid large yellow submit button"
               onClick={this.handleSubmit}
-              type="submit">Sign Up!</button>
+              type="submit">Sign Up!</button> */}
           </div>
 
           <div className="ui error message"></div>
