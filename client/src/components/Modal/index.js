@@ -1,64 +1,32 @@
-// import React from "react";
-// // import { render } from "react-dom";
-// import { Button, Modal, Input } from "semantic-ui-react";
-// import "semantic-ui-css/semantic.css";
+import React from 'react'
+import { Button, Header, Modal, Confirm } from 'semantic-ui-react'
 
-// class PopupExampleClick extends React.Component {
-//   state = { open: false, open2: false };
+const ModalModalExample = () => (
+  <Modal trigger={<Button>Show Modal</Button>}>
+    <Modal.Header>Select a Photo</Modal.Header>
+    <Modal.Content image>
+      {/* <Image wrapped size='medium' src='/images/avatar/large/rachel.png' /> */}
+      <Modal.Description>
+        <Header>Sign Up Confirmed!</Header>
+        <p>Please login with your newly created Username & Password</p>
+      </Modal.Description>
+      <Button className="ui fluid large yellow submit button" 
+									 onClick={(e) => {
+										// e.preventDefault();
+										// this.handleForm(formData);
+										this.open(e);
+										// e.preventDefault();
+										this.handleSubmit(e);
+										// this.loadUser(e);
+								}}
 
-//   render() {
-//     return (
-      
-//       <div>
-//         <Button style = {{width : "182px"}} content="Change Email" onClick={() => this.setState({ open: true, open2:false })} />
-//         <Modal
-//           open={this.state.open}
-//           onClose={() => this.setState({ open: false })}
-//         >
-//           <Modal.Content> <Input placeholder='Enter Your New Email' />
-//             <Button
-//               content="Save"
-//               onClick={() => this.setState({ open2: true })}
-//             />
-//             <Modal open={this.state.open2}>
-//               <Modal.Content> 
-//                 <Button onClick={() => this.setState({ open: false })}>
-//                   Successfully Updated Your Email
+									// onClick={this.open} 
+									// onClick={this.handleSubmit}
+									type="submit">Sign Up!</Button>
+        <Confirm open={this.state.open} onCancel={this.loadUser} onConfirm={this.loadUser} ></Confirm>
+					
+    </Modal.Content>
+  </Modal>
+)
 
-//                 </Button>
-//                 <canvas />
-//               </Modal.Content>
-//             </Modal>
-//           </Modal.Content>
-//         </Modal>
-//       </div>
-//     );
-//   }
-// }
-
-// export default PopupExampleClick;
-
-
-import React, { Component } from 'react'
-import { Button, Confirm } from 'semantic-ui-react'
-
-class SignUpModal extends Component {
-  state = { open: false }
-
-  open = () => this.setState({ open: true })
-  close = () => this.setState({ open: false })
-
-  render() {
-    return (
-      <div>
-        <Button onClick={this.open}>Show</Button>
-        <Confirm open={this.state.open} onCancel={this.close} onConfirm={this.close} > 
-        <div className="content">
-        asdadads</div>
-        </Confirm>
-      </div>
-    )
-  }
-}
-
-export default SignUpModal
+export default ModalModalExample

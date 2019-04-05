@@ -88,6 +88,11 @@ h1 {text-align: center;
   font-family: 'Cinzel', serif;
 }
 
+.description{
+  text-align: center;
+  color: black;
+}
+
 @media only screen and (max-width: 980px) {
   #movie-card{
     width: 50%;
