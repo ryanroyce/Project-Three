@@ -1,7 +1,4 @@
 import React from "react";
-// import DeleteBtn from "../DeleteBtn"
-// import coverArt from '../../images/matrix.png';
-// import "../LoginForm/style.css";
 import { Rating } from 'semantic-ui-react'
 
 const Saved = props => {
