@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
+import { Button, Modal } from 'semantic-ui-react'
 
 class SignUpForm extends Component {
+	state = { open: false }
+
+	open = () => this.setState({ open: true })
+	close = () => this.setState({ open: false })
+
 	constructor() {
 		super()
 		this.state = {
@@ -19,84 +25,96 @@ class SignUpForm extends Component {
 	}
 
 
-	loadUser(){
-		window.location.href="/";
+	loadUser() {
+		window.location.href = "/";
 	}
 
-	
+
 	handleSubmit(event) {
 		event.preventDefault()
 		console.log('sign-up handleSubmit, username: ')
 		console.log(this.state.username)
 		if (this.state.username && this.state.password) {
 			API.saveUser({
-			  username: this.state.username,
-			  password: this.state.password,
+				username: this.state.username,
+				password: this.state.password,
 			})
 				// .then(res => this.loadUser())
 				.then(res => {
 					console.log(res)
-					if (res.data.error){
+					if (res.data.error) {
 						alert(res.data.error)
 					} else {
-						this.loadUser()
+						// this.loadUser();
 					}
 				})
-			  .catch(err => console.log(err));
-		  }
+				.catch(err => console.log(err));
+		}
 	}
 
-render() {
-	return (
-		<div className="ui middle aligned center aligned grid" id="body">
-		<div className="eight wide column">
-		<h1 className="film-heading">CinéSearch
+	render() {
+		return (
+			<div className="ui middle aligned center aligned grid" id="body">
+				<div className="eight wide column">
+					<h1 className="film-heading">CinéSearch
         </h1>
-				<span className="ui black image header">
-              <div className="content">
-                Sign up for an account!
+					<span className="ui black image header">
+						<div className="content">
+							Sign up for an account!
              </div>
-            </span>
-		   <form className="ui large form">
-          <div className="ui stacked segment">
-            <div className="field">
-            <div className="ui left icon input">
-            <i className="user icon"></i>
-              <input className="form-input"
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Username"
-                value={this.state.username}
-                onChange={this.handleChange}
-              />
-              </div>
-            </div>
-          
-          <div className="field">
-                <div className="ui left icon input">
-                <i className="lock icon"></i>
-              <input className="form-input"
-                placeholder="password"
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
-            </div>
-          </div>
-      
-          <button className="ui fluid large yellow submit button"
-              onClick={this.handleSubmit}
-              type="submit">Sign Up!</button>
-          </div>
+					</span>
+					<form className="ui large form">
+						<div className="ui stacked segment">
+							<div className="field">
+								<div className="ui left icon input">
+									<i className="user icon"></i>
+									<input className="form-input"
+										type="text"
+										id="username"
+										name="username"
+										placeholder="Username"
+										value={this.state.username}
+										onChange={this.handleChange}
+									/>
+								</div>
+							</div>
 
-          <div className="ui error message"></div>
-        </form>
-        </div>
-      </div>
-	)
-}
+							<div className="field">
+								<div className="ui left icon input">
+									<i className="lock icon"></i>
+									<input className="form-input"
+										placeholder="password"
+										type="password"
+										name="password"
+										value={this.state.password}
+										onChange={this.handleChange}
+									/>
+								</div>
+							</div>
+
+							<Modal className="eight wide column" trigger={<Button className="ui fluid large yellow submit button" type="submit"
+								onClick={(e) => {
+									this.open(e);
+									this.handleSubmit(e);
+								}}>Sign Up!</Button>}>
+								<Modal.Header className="modal-content">Sign Up Confirmed!</Modal.Header>
+								<Modal.Content>
+									<Modal.Description className="modal-content">
+										<p>Please login with your newly created Username & Password</p>
+									</Modal.Description>
+								</Modal.Content>
+								<Modal.Actions>
+								<Button onClick={this.loadUser}> Close </Button>
+								 </Modal.Actions>
+							</Modal>
+						</div>
+
+						<div className="ui error message"></div>
+					</form>
+				</div>
+			</div>
+		)
+	}
 }
 
 export default SignUpForm
