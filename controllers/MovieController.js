@@ -50,11 +50,25 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.Movie
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  }
+    console.log(req.params.id);
+    console.log(req.session.user);
+    db.User.update( 
+      { username: req.session.user},
+      { $pull: { movies : { _id : req.params.id } } },
+      // { safe: true },
+      function removeConnectionsCB(err, obj) {
+          res.json(obj);
+      });
+    }
+    // db.User
+    //   .findOne({ username: req.session.user })
+    //   .then(dbModel => {
+    //     console.log("inside then" +dbModel.movies[0]);
+    //     dbModel.movies[0].pull( {_id: "5ca569855bdc3e169c1694c8"} )
+    //           //  dbModel.movies.findByIdAndRemove({_id:req.params.id});
+    //           console.log("end of then"); 
+    //   })
+    //   .then(dbModel => res.json(dbModel))
+    //   .catch(err => res.status(422).json(err));
+  
 };
-//lol//
