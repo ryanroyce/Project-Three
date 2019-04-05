@@ -1,0 +1,4 @@
+# delete before deployment to Heroku!!
+#hides keys, passwords, other important info.
+
+.env
