@@ -34,6 +34,14 @@ export default {
     return axios.get("/api/omdb", { params: { t: query } });
   },
 
+  getGenre: function(query) {
+    return axios.get("/api/rapid", { params: { genre: query}})
+  },
+
+  saveGenre: function(query){
+    return axios.put("/api/movies", { params: { genre: query}})
+  },
+
   getUser: function(userData) {
     console.log(userData)
     return axios.post("/api/users", userData);

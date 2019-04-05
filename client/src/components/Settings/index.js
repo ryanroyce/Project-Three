@@ -11,7 +11,7 @@ import "semantic-ui-css/semantic.css";
  const genreOption = [
      {key: "Action", text: "Action",value: "Action"},
      {key: "Comedy", text: "Comedy",value: "Comedy"},
-     { key: "Drama", text: "Drama",value: "Drama"},
+     {key: "Drama", text: "Drama",value: "Drama"},
      {key: "Documentary", text: "Documentary",value: "Documentary"},
      {key: "Horror", text: "Horror",value: "Horror"}
 ]
@@ -24,8 +24,7 @@ const providerOption = [
     {key: "Netflix", text: "Netflix",value: "Netflix"}
 ]
 
-
-function Settings() {
+function Settings(props) {
     return (
         <div className="ui grid">
             <div className="row">
@@ -50,7 +49,7 @@ function Settings() {
            </p>
             {/* <Dropdown placeholder='Genre' multiple selection options={genreOption} /> */}
             {/* <Dropdown placeholder='Genre' clearable options={genreOption} selection /> */}
-            <Dropdown placeholder='Genre' search selection options={genreOption} />
+            <Dropdown placeholder='Genre' search selection options={genreOption} onChange={props.onGenre} />
             </div>
             </div>
             <div className="row">
@@ -78,18 +77,18 @@ function Settings() {
 
             <div className="row">
             <div className="col-md-6">
-            <Modal
+            {/* <Modal
     trigger={<Button className="ui yellow button" style = {{width : "195px"}}>Delete Account</Button>}
     header='Are you sure you want to delete your account!'
     // content='Call Benjamin regarding the reports.'
     actions={[ { key: 'no', content: 'No', positive: false },{ key: 'yes', content: 'Yes', positive: true }]}
-  />
+  /> */}
+            <button className="ui fluid large yellow submit button"
+                  type="submit" onClick={props.saveGenre}>Look for Movies!</button>
             </div></div>
             <div className="row">
             <div className="col-md-6">
-             
   </div>
- 
             </div>
         </div>
     );

@@ -15,7 +15,8 @@ const userSchema = new Schema({
             plot:  { type: String },
             year:  { type: String},
 		}
-	]
+	],
+	genre: {type: String}
 })
 
 // Define schema methods

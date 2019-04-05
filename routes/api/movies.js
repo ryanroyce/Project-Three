@@ -10,7 +10,10 @@ router.route("/")
 router
   .route("/:id")
   .get(MovieController.findById)
-  .put(MovieController.update)
+  
   .delete(MovieController.remove);
 
+
+  router.route("/:genre")
+  .put(MovieController.update);
 module.exports = router;
