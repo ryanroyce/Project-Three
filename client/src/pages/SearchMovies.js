@@ -15,9 +15,7 @@ class SearchMovies extends Component {
 
   saveMovie = movieData => {
     API.saveMovie(movieData).then(this.getRapid())
-  
-      
-      .catch(err => console.log(err));
+    .catch(err => console.log(err));
   };
 
 

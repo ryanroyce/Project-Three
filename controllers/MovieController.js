@@ -44,16 +44,20 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.Movie
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+    db.User
+      .findOneAndUpdate({username: req.session.user}, {genre: req.params.genre})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.User
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  }
+    console.log(req.params.id);
+    console.log(req.session.user);
+    db.User.update( 
+      { username: req.session.user},
+      { $pull: { movies : { _id : req.params.id } } },
+      { safe: true },
+      function removeConnectionsCB(err, obj) {
+          res.json(obj);
+      });
+    }
 };

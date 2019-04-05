@@ -10,6 +10,7 @@ router.route("/")
   router
   .route("/:genre")
   .get(rapidController.findGenre)
+  
 
   router
   .route("/provider/:providers")

@@ -60,7 +60,7 @@ class SavedMovies extends Component {
                   Plot={movie.plot}
                   Image={movie.image}
                   Year={movie.year}
-                  DeleteMovie={(res) => this.deleteMovie(res._id)}>
+                  DeleteMovie={() => this.deleteMovie(movie._id)}>
                 </Saved>
               ))}
             </div>
