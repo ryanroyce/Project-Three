@@ -22,7 +22,6 @@ class LoginForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    console.log('handleSubmit BOI')
     sessionStorage.setItem("username", this.state.username)
 
     if (this.state.username && this.state.password) {
@@ -31,18 +30,15 @@ class LoginForm extends Component {
         password: this.state.password
       })
         .then(res => {
-          console.log("output:" + res);
           if (res.data) {
             this.setState({ redirectTo: "/settings" })
-            console.log("inside output: " + res);
-          } else { 
+          } else {
             alert("THIS NOT GOOD")
-            console.log("login machine broke")
-          this.setState({ redirectTo: null });
-        }
+            this.setState({ redirectTo: null });
+          }
         })
         .catch(err => console.log(err));
-        
+
     } else if (!this.state.username || !this.state.password) {
       alert("Please Enter a Username or Password.")
     }
@@ -56,11 +52,11 @@ class LoginForm extends Component {
         <div className="ui middle aligned center aligned grid" id="body">
           <div className="eight wide column">
             <h1 className="film-heading">CinéSearch
-        </h1>
+            </h1>
             <span className="ui black image header">
               <div className="content">
                 Log-in to your account
-             </div>
+              </div>
             </span>
             <form className="ui large form">
               <div className="ui stacked segment">
@@ -87,26 +83,25 @@ class LoginForm extends Component {
                       name="password"
                       value={this.state.password}
                       onChange={this.handleChange}
-                    />
-                  </div>
-                </div>
+                   />
+                 </div>
+               </div>
 
-                <button className="ui fluid large grey submit button"
-                  onClick={this.handleSubmit}
-                  type="submit">Login</button>
-              </div>
+                <button className="ui fluid large grey submit button" onClick={this.handleSubmit}type="submit">
+                 Login</button>
+             </div>
 
-              <div className="ui error message"></div>
+               <div className="ui error message"></div>
 
               <div className="ui message">
                 New to us?
-            <a href="/signup">
+                <a href="/signup">
                   <button className="ui button yellow create_btn" type="button" id="signup">Sign Up</button>
                 </a>
               </div>
-            </form>
-          </div>
-        </div>
+             </form>
+           </div>
+         </div>
       )
     }
   }
