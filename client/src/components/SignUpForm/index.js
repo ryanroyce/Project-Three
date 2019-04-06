@@ -3,11 +3,6 @@ import API from '../../utils/API';
 import { Button, Modal } from 'semantic-ui-react'
 
 class SignUpForm extends Component {
-	state = { open: false }
-
-	open = () => this.setState({ open: true })
-	close = () => this.setState({ open: false })
-
 	constructor() {
 		super()
 		this.state = {
@@ -18,17 +13,16 @@ class SignUpForm extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
 	}
+
 	handleChange(event) {
 		this.setState({
 			[event.target.name]: event.target.value
 		})
 	}
 
-
 	loadUser() {
 		window.location.href = "/";
 	}
-
 
 	handleSubmit(event) {
 		event.preventDefault()
@@ -39,29 +33,29 @@ class SignUpForm extends Component {
 				username: this.state.username,
 				password: this.state.password,
 			})
-				// .then(res => this.loadUser())
 				.then(res => {
 					console.log(res)
 					if (res.data.error) {
 						alert(res.data.error)
-					} else {
-						// this.loadUser();
 					}
 				})
 				.catch(err => console.log(err));
 		}
 	}
+	// state of sign up modal
+	state = { open: false }
+	open = () => this.setState({ open: true })
+	close = () => this.setState({ open: false })
 
 	render() {
 		return (
 			<div className="ui middle aligned center aligned grid" id="body">
 				<div className="eight wide column">
-					<h1 className="film-heading">CinéSearch
-        </h1>
+					<h1 className="film-heading">CinéSearch</h1>
 					<span className="ui black image header">
 						<div className="content">
 							Sign up for an account!
-             </div>
+             			</div>
 					</span>
 					<form className="ui large form">
 						<div className="ui stacked segment">
@@ -74,8 +68,7 @@ class SignUpForm extends Component {
 										name="username"
 										placeholder="Username"
 										value={this.state.username}
-										onChange={this.handleChange}
-									/>
+										onChange={this.handleChange}/>
 								</div>
 							</div>
 
@@ -87,8 +80,7 @@ class SignUpForm extends Component {
 										type="password"
 										name="password"
 										value={this.state.password}
-										onChange={this.handleChange}
-									/>
+										onChange={this.handleChange}/>
 								</div>
 							</div>
 
@@ -100,12 +92,12 @@ class SignUpForm extends Component {
 								<Modal.Header className="modal-content">Sign Up Confirmed!</Modal.Header>
 								<Modal.Content>
 									<Modal.Description className="modal-content">
-										<p>Please login with your newly created Username & Password</p>
+										<p>Please login with your created Username & Password</p>
 									</Modal.Description>
 								</Modal.Content>
 								<Modal.Actions>
-								<Button onClick={this.loadUser}> Close </Button>
-								 </Modal.Actions>
+									<Button onClick={this.loadUser}>Okay!</Button>
+								</Modal.Actions>
 							</Modal>
 						</div>
 
